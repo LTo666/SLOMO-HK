@@ -1,6 +1,4 @@
 import React from "react"
-// import { Card } from "react-daisyui"
-// import { Button } from "react-daisyui"
 
 export default function TourCard({btn, des, title}) {
   return (

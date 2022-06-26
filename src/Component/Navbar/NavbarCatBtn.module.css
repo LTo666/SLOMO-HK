@@ -1,0 +1,10 @@
+.NavbarCatBtn {
+  transition: all 0.3s ease-out;
+  padding-block: 0.75rem;
+  border-bottom: 3px solid rgba(55, 205, 190, 0);
+}
+
+.NavbarCatBtn:hover {
+  color: hsl(var(--p));
+  border-bottom: 3px solid rgba(55, 205, 190, 1);
+}

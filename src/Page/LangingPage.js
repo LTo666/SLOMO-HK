@@ -15,7 +15,7 @@ export default function LangingPage() {
       LangingPage
       <div className='grid grid-cols-2' >
       {content.map((item, id) => {
-        return <TourCard btn={item.btn} title={item.title} des={item.des}></TourCard>
+        return <TourCard btn={item.btn} title={item.title} des={item.des} key={id} ></TourCard>
       })}
       </div>
       

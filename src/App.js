@@ -4,31 +4,43 @@ import BlogResultPage from "./Page/BlogResultPage"
 import LandingPage from "./Page/LangingPage"
 import FilterPage from "./Page/FilterPage"
 import TourPage from "./Page/TourPage"
+import NavbarCatBtn from "./Component/Navbar/NavbarCatBtn"
+import NavbarBtn from "./Component/Navbar/NavbarBtn"
 
 function App() {
-  const navStyle = {
-    margin: "4rem",
-    textDecoration: "none",
-    fontSize: "2rem",
-  }
   return (
     <div>
-      <header>
-        <nav style={{ backgroundColor: "black" }}>
-          <Link style={navStyle} to="/">
-            Home
+      <header className="fixed sticky top-0 z-50 bg-base-100">
+        <nav
+          className="text-xl py-[1rem] px-[6rem] flex justify-between"
+          style={{ borderBottom: "1px solid grey" }}
+        >
+          <Link to="/">
+            <NavbarBtn ctn="LOGO/HOME" />
           </Link>
-          <Link style={navStyle} to="/filter">
-            Search Bar
+          {/* <Link to="/filter">Search Bar</Link> */}
+
+          <div className="flex">
+            <NavbarBtn ctn="Cart" />
+            <NavbarBtn ctn="SignUp / Login" />
+          </div>
+        </nav>
+        <nav
+          className="flex justify-evenly text-lg"
+          style={{ borderBottom: "1px solid grey" }}
+        >
+          <Link to="/tour">
+            <NavbarCatBtn cat={"Tour"} />
           </Link>
-          <Link style={navStyle} to="/tour">
-            Tours
+          <Link to="/blog">
+            <NavbarCatBtn cat={"Blog"} />
           </Link>
-          <Link style={navStyle} to="/blog">
-            Blogs
-          </Link>
-          <span style={{ color: "white" }}>Shopping Cart</span>
-          <span style={{ color: "white" }}>Login / Sign Up</span>
+          <NavbarCatBtn cat={"Dummmy"} />
+          <NavbarCatBtn cat={"Dummmy"} />
+          <NavbarCatBtn cat={"Dummmy"} />
+          <NavbarCatBtn cat={"Dummmy"} />
+          <NavbarCatBtn cat={"Dummmy"} />
+          <NavbarCatBtn cat={"Dummmy"} />
         </nav>
       </header>
 
