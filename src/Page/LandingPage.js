@@ -1,6 +1,6 @@
 import React from "react"
 import TourCard from "../Component/TourCard"
-import Map from "../Component/Navbar/Map"
+import Map from "../Component/Map"
 
 export default function LandingPage() {
   const content = [

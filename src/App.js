@@ -21,8 +21,8 @@ function App() {
           {/* <Link to="/filter">Search Bar</Link> */}
 
           <div className="flex">
-            <NavbarBtn ctn="Cart" />
-            <NavbarBtn ctn="SignUp / Login" />
+            <NavbarBtn logo="cart" />
+            <NavbarBtn ctn="Login/SignUp" />
           </div>
         </nav>
         <nav
