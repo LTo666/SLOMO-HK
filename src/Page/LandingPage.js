@@ -5,32 +5,6 @@ import BloggerCatCard from "../Component/LandingPage/BloggerCatCard"
 import CatCard from "../Component/LandingPage/CatCard"
 
 export default function LandingPage() {
-  const content = [
-    {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Shoes", "Sporty"],
-      location: "HK Tsim Sha Tsui",
-      price: "0",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Woman", "Casual"],
-      location: "HK Central",
-      price: "200",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Man", "Sporty"],
-      location: "HK Mong Kok",
-      price: "300",
-    },
-    {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Kid", "Playful"],
-      location: "HK Tsuen Wan",
-      price: "400",
-    },
-  ]
 
   return (
     <div>
@@ -55,20 +29,6 @@ export default function LandingPage() {
           </div>
         </div>
 
-        <p>This is a demostration of cards</p>
-        <div className="grid grid-cols-4 gap-6">
-          {content.map((item, id) => {
-            return (
-              <TourCard
-                title={item.title}
-                cat={item.cat}
-                location={item.location}
-                price={item.price}
-                key={id}
-              ></TourCard>
-            )
-          })}
-        </div>
       </div>
     </div>
   )

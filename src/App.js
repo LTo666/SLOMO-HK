@@ -28,21 +28,25 @@ function App() {
           </div>
         </nav>
         <nav
-          className="wrapper flex justify-around text-lg"
+          className="text-lg"
           style={{ borderBottom: "1px solid lightgrey" }}
         >
-          <Link to="/tour">
-            <NavbarCatBtn cat={"Tour"} />
-          </Link>
-          <Link to="/blog">
-            <NavbarCatBtn cat={"Blog"} />
-          </Link>
-          <NavbarCatBtn cat={"Dummmy"} />
-          <NavbarCatBtn cat={"Dummmy"} />
-          <NavbarCatBtn cat={"Dummmy"} />
-          <NavbarCatBtn cat={"Dummmy"} />
-          <NavbarCatBtn cat={"Dummmy"} />
-          <NavbarCatBtn cat={"Dummmy"} />
+          <div className="wrapper flex justify-around">
+            <Link to="/tour">
+              <NavbarCatBtn cat={"Tour"} />
+            </Link>
+            <Link to="/blog">
+              <NavbarCatBtn cat={"Blog"} />
+            </Link>
+            <Link to="/filter">
+              <NavbarCatBtn cat={"Filter"} />
+            </Link>
+            <NavbarCatBtn cat={"Dummmy"} />
+            <NavbarCatBtn cat={"Dummmy"} />
+            <NavbarCatBtn cat={"Dummmy"} />
+            <NavbarCatBtn cat={"Dummmy"} />
+            <NavbarCatBtn cat={"Dummmy"} />
+          </div>
         </nav>
       </header>
 
