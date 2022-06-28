@@ -2,7 +2,7 @@ import React from "react"
 import style from "./BloggerCatCard.module.css"
 
 export default function BloggerCatCard({ isVdo }) {
-  const divClassName = "w-full h-[20rem] overflow-hidden rounded-[1rem] relative flex justify-center cursor-pointer"
+  const divClassName = "w-full aspect-video overflow-hidden rounded-[1rem] relative flex justify-center cursor-pointer"
   const imgClassName = "h-full w-auto absolute top-0 left-0 object-cover"
   const titleClassName = "z-20 absolute bottom-[2rem] text-[1.75rem] text-[white] transition-all duration-300"
 

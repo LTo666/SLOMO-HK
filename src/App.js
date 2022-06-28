@@ -12,7 +12,7 @@ function App() {
     <div>
       <header className="fixed sticky top-0 z-50 bg-base-100">
         <nav
-          className="text-xl py-[1rem] px-[6rem]"
+          className="text-xl py-[1rem]"
           style={{ borderBottom: "1px solid lightgrey" }}
         >
           <div className="wrapper flex justify-between">
@@ -28,7 +28,7 @@ function App() {
           </div>
         </nav>
         <nav
-          className="wrapper flex justify-evenly text-lg"
+          className="wrapper flex justify-around text-lg"
           style={{ borderBottom: "1px solid lightgrey" }}
         >
           <Link to="/tour">
