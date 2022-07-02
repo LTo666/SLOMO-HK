@@ -1,167 +1,269 @@
-import React from "react"
+import FilterCard from "../Component/FilterPage/FilterCard"
+import { useState, createContext } from "react"
 import Filter from "../Component/FilterPage/Filter"
-import Map from "../Component/LandingPage/Map"
-import { Form, Checkbox } from "react-daisyui"
-import TourCard from "../Component/TourCard"
+import { Link } from "react-router-dom"
+import Banner from "../Component/Banner/Banner"
+
+export const FilterContext = createContext()
 
 export default function FilterPage() {
-  const content = [
+  const data = [
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Shoes", "Sporty"],
-      location: "HK Tsim Sha Tsui",
-      price: "0",
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
+      cat: ["Man", "Spa"],
+      location: ["Hong Kong", "Kowloon", "Mong Kok"],
+      price: 0,
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Woman", "Casual"],
-      location: "HK Central",
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing asdcxzgedsyg",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
       price: "200",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Man", "Sporty"],
-      location: "HK Mong Kok",
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cvbrs gtydf",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
       price: "300",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Kid", "Playful"],
-      location: "HK Tsuen Wan",
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing sdfgs dge r e",
+      cat: ["Kid", "Theme Park"],
+      location: ["Hong Kong", "Kowloon", "Tai Po"],
       price: "400",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Shoes", "Sporty"],
-      location: "HK Tsim Sha Tsui",
-      price: "0",
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfv sdger g dsfgsdgr ",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "New Territories", "Tai Po"],
+      price: 0,
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Woman", "Casual"],
-      location: "HK Central",
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfg esrg sdcv sdfgesr g",
+      cat: ["Woman", "Restaurant"],
+      location: ["Hong Kong", "Kowloon", "Tai Po"],
       price: "200",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Man", "Sporty"],
-      location: "HK Mong Kok",
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdvc esdrv sdrgdscvsedrg",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Island District", "Tai Po"],
       price: "300",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing",
-      cat: ["Kid", "Playful"],
-      location: "HK Tsuen Wan",
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdcv dsfg sdrg 4e grtehrtd",
+      cat: ["Kid", "Restaurant"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
+      price: "400",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
+      cat: ["Man", "Spa"],
+      location: ["Hong Kong", "Kowloon", "Mong Kok"],
+      price: 0,
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing asdcxzgedsyg",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
+      price: "200",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cvbrs gtydf",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
+      price: "300",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing sdfgs dge r e",
+      cat: ["Kid", "Theme Park"],
+      location: ["Hong Kong", "Kowloon", "Tai Po"],
+      price: "400",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfv sdger g dsfgsdgr ",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "New Territories", "Tai Po"],
+      price: 0,
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfg esrg sdcv sdfgesr g",
+      cat: ["Woman", "Restaurant"],
+      location: ["Hong Kong", "New Territories", "Tai Po"],
+      price: "200",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdvc esdrv sdrgdscvsedrg",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Island District", "Tai Po"],
+      price: "300",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdcv dsfg sdrg 4e grtehrtd",
+      cat: ["Kid", "Restaurant"],
+      location: ["Hong Kong", "Island District", "Tai Po"],
+      price: "400",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
+      cat: ["Man", "Spa"],
+      location: ["Hong Kong", "Kowloon", "Mong Kok"],
+      price: 0,
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing asdcxzgedsyg",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
+      price: "200",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cvbrs gtydf",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
+      price: "300",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing sdfgs dge r e",
+      cat: ["Kid", "Theme Park"],
+      location: ["Hong Kong", "Kowloon", "Tai Po"],
+      price: "400",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfv sdger g dsfgsdgr ",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "New Territories", "Tai Po"],
+      price: 0,
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfg esrg sdcv sdfgesr g",
+      cat: ["Woman", "Restaurant"],
+      location: ["Hong Kong", "New Territories", "Tai Po"],
+      price: "200",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdvc esdrv sdrgdscvsedrg",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Island District", "Tai Po"],
+      price: "300",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdcv dsfg sdrg 4e grtehrtd",
+      cat: ["Kid", "Restaurant"],
+      location: ["Hong Kong", "Island District", "Tai Po"],
+      price: "400",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
+      cat: ["Man", "Spa"],
+      location: ["Hong Kong", "Kowloon", "Mong Kok"],
+      price: 0,
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing asdcxzgedsyg",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
+      price: "200",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cvbrs gtydf",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Hong Kong Island", "Tai Po"],
+      price: "300",
+    },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur adipiscing sdfgs dge r e",
+      cat: ["Kid", "Theme Park"],
+      location: ["Hong Kong", "Kowloon", "Tai Po"],
+      price: "400",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfv sdger g dsfgsdgr ",
+      cat: ["Woman", "Spa"],
+      location: ["Hong Kong", "New Territories", "Tai Po"],
+      price: 0,
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing sdfg esrg sdcv sdfgesr g",
+      cat: ["Woman", "Restaurant"],
+      location: ["Hong Kong", "New Territories", "Tai Po"],
+      price: "200",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdvc esdrv sdrgdscvsedrg",
+      cat: ["Man", "Theme Park"],
+      location: ["Hong Kong", "Island District", "Tai Po"],
+      price: "300",
+    },
+    {
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscingsdcv dsfg sdrg 4e grtehrtd",
+      cat: ["Kid", "Restaurant"],
+      location: ["Hong Kong", "Island District", "Tai Po"],
       price: "400",
     },
   ]
 
+  const [filtered, setFiltered] = useState(data)
+
+  const [criteria, setCriteria] = useState([])
+
+  const results = filtered.map((item, id) => {
+    return (
+      <FilterCard
+        title={item.title}
+        cat={item.cat}
+        location={item.location[1]}
+        price={item.price}
+        key={id}
+      />
+    )
+  })
+
   return (
-    <div>
-      <Map />
-      <div className="wrapper">
-        <h6 className="py-4">This is an page for filtering result</h6>
+    <FilterContext.Provider
+      value={{ data, criteria, setCriteria, setFiltered }}
+    >
+      <div className="bg-base-200 pb-[4rem]">
+        <Banner />
+        <div className="wrapper">
+          <div className="py-6 pl-2 text-md breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>Hong Kong</li>
+            </ul>
+          </div>
 
-        <div className="flex flex-row justify-between w-full">
-          <section
-            className="h-[75vh] w-[20%] sticky top-[10rem] p-[1rem]"
-            style={{ border: "2px solid black" }}
-          >
-            <div>
-              <p className="text-2xl">Location</p>
+          <div className="flex flex-row justify-between w-full">
+            <Filter />
 
-              <div>
-                <div
-                  tabindex="0"
-                  className="collapse collapse-arrow bg-base-100 rounded-box transition-all duration-300 ease-out"
-                >
-                  <input type="checkbox" className="peer" />
-                  <div className="collapse-title transition-all duration-300 ease-out">
-                    Hong Kong
-                  </div>
-                  <div className="collapse-content transition-all duration-300 ease-out">
-                    <Form className="rounded-lg px-2 hover:bg-base-300">
-                      <Form.Label className="cursor-pointer" title="Mong Kok">
-                        <Checkbox />
-                      </Form.Label>
-                    </Form>
-                    <Form className="rounded-lg px-2 hover:bg-base-300">
-                      <Form.Label
-                        className="cursor-pointer"
-                        title="Tsim Sha Tsui"
-                      >
-                        <Checkbox />
-                      </Form.Label>
-                    </Form>
-                    <Form className="rounded-lg px-2 hover:bg-base-300">
-                      <Form.Label
-                        className="cursor-pointer"
-                        title="Lantau Island"
-                      >
-                        <Checkbox />
-                      </Form.Label>
-                    </Form>
-                    <Form className="rounded-lg px-2 hover:bg-base-300">
-                      <Form.Label
-                        className="cursor-pointer"
-                        title="North Point"
-                      >
-                        <Checkbox />
-                      </Form.Label>
-                    </Form>
-                  </div>
-                </div>
+            <section className="w-[75%]">
+              <p className="text-xl p-4  bg-base-100 mb-4 rounded-[1rem]">
+                <strong>{`${results.length}`}</strong> activities are found.
+              </p>
+              <div className="grid grid-cols-[repeat(auto-fit,_minmax(17rem,_1fr))] gap-x-4 gap-y-8">
+                {results}
               </div>
-            </div>
-            <div>
-              <p className="text-2xl">Categories</p>
-
-              <div className="p-[1rem]">
-                <Form className="rounded-lg px-2 hover:bg-base-300">
-                  <Form.Label className="cursor-pointer" title="Spa">
-                    <Checkbox />
-                  </Form.Label>
-                </Form>
-                <Form className="rounded-lg px-2 hover:bg-base-300">
-                  <Form.Label className="cursor-pointer" title="Theme Park">
-                    <Checkbox />
-                  </Form.Label>
-                </Form>
-                <Form className="rounded-lg px-2 hover:bg-base-300">
-                  <Form.Label className="cursor-pointer" title="Restaurant">
-                    <Checkbox />
-                  </Form.Label>
-                </Form>
-                <Form className="rounded-lg px-2 hover:bg-base-300">
-                  <Form.Label className="cursor-pointer" title="More">
-                    <Checkbox />
-                  </Form.Label>
-                </Form>
-              </div>
-            </div>
-          </section>
-
-          <section
-            className="h-[100rem] w-[75%]"
-            style={{ border: "2px solid black" }}
-          >
-            <p className="text-xl p-4"><strong>{`${content.length}`}</strong> activities are found.</p>
-            <div className="grid grid-cols-3 gap-6">
-              {content.map((item, id) => {
-                return (
-                  <TourCard
-                    title={item.title}
-                    cat={item.cat}
-                    location={item.location}
-                    price={item.price}
-                    key={id}
-                  ></TourCard>
-                )
-              })}
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
+    </FilterContext.Provider>
   )
 }

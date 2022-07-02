@@ -1,9 +1,8 @@
-import React from "react"
-import Style from "./TourCard.module.css"
+import Style from "./FilterCard.module.css"
 
-export default function TourCard({ title, location, cat, price }) {
+export default function FilterCard({ title, location, cat, price }) {
   return (
-    <div className={Style.TourCard}>
+    <div className={`${Style.TourCard}`}>
       <figure className="h-[10rem] overflow-hidden">
         <img
           src="https://api.lorem.space/image/shoes?w=400&h=225"
@@ -36,12 +35,12 @@ export default function TourCard({ title, location, cat, price }) {
         </div>
 
         <div>
-          {!cat && cat.length === 0 ? <></> : cat.map((item, i) => {
-            return <div className="badge badge-[black] badge-outline mr-2 text-xs" key={i}>{item}</div>
+          {cat && cat.length !== 0 && cat.map((item, i) => {
+            return <div className="badge badge-outline rounded-md mr-2 text-xs" key={i}>{item}</div>
           })}
         </div>
 
-        {price === "0" ? <p className="text-lg font-semibold pt-[1.25rem]">Free</p> : <p className="text-sm pt-[1.25rem]">HKD <span className="text-lg font-semibold">{price}</span></p> }
+        {price === 0 ? <p className="text-lg font-semibold pt-[1.25rem]">Free</p> : <p className="text-sm pt-[1.25rem]">HKD <span className="text-lg font-semibold">{price}</span></p> }
 
       </div>
     </div>

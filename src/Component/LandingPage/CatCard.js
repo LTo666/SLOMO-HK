@@ -1,4 +1,3 @@
-import React from "react"
 
 export default function CatCard({ title }) {
   const divClassName =
@@ -12,7 +11,7 @@ export default function CatCard({ title }) {
         className="w-full h-[75%] object-cover"
       />
 
-      <div className="h-[25%] flex justify-center items-center">
+      <div className="h-[25%] flex pl-[15%] justify-start items-center">
         <span className="text-2xl">{title}</span>
       </div>
     </div>

@@ -1,33 +1,28 @@
-.TourCard {
+.HotProductCard {
   border: 1px solid lightgrey;
   border-radius: 1rem;
   width: 17rem;
-  height: 22rem;
+  height: 19.5rem;
   background-color: hsl(var(--b1));
   justify-self: center;
-  transition: box-shadow 0.5s ease-in;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
-.TourCard img {
+.HotProductCard img {
   height: 10rem;
   overflow: hidden;
   object-fit: cover;
-  transition: transform 0.5s ease-in;
 }
 
-.TourCard:hover {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+.HotProductCard:hover {
+  box-shadow: 0 10px 15px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
+  transform: translateY(-0.8rem);
   cursor: pointer;
 }
 
-.TourCard:hover img {
-  transform: scale(1.2);
-}
-
 .Title {
-  margin-bottom: 0.6rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -36,7 +31,7 @@
   -webkit-box-orient: vertical;
 }
 
-.TourCard > div {
+.HotProductCard > div {
   padding-inline: 1rem;
   padding-block: 0.75rem;
 }

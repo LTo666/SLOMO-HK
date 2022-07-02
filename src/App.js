@@ -3,11 +3,19 @@ import "./App.css"
 import BlogResultPage from "./Page/BlogResultPage"
 import LandingPage from "./Page/LandingPage"
 import FilterPage from "./Page/FilterPage"
-import TourPage from "./Page/TourPage"
+import ProductPage from "./Page/ProductPage"
 import NavbarCatBtn from "./Component/Navbar/NavbarCatBtn"
 import NavbarBtn from "./Component/Navbar/NavbarBtn"
+import Carousel from "./Component/Carousel/Carousel"
 
 function App() {
+  const slides = [
+    "https://picsum.photos/id/1032/1440/600",
+    "https://picsum.photos/id/1033/1440/600",
+    "https://picsum.photos/id/1037/1440/600",
+    "https://picsum.photos/id/1035/1440/600",
+    "https://picsum.photos/id/1036/1440/600",
+  ]
   return (
     <div>
       <header className="fixed sticky top-0 z-50 bg-base-100">
@@ -32,8 +40,8 @@ function App() {
           style={{ borderBottom: "1px solid lightgrey" }}
         >
           <div className="wrapper flex justify-around">
-            <Link to="/tour">
-              <NavbarCatBtn cat={"Tour"} />
+            <Link to="/product">
+              <NavbarCatBtn cat={"Product"} />
             </Link>
             <Link to="/blog">
               <NavbarCatBtn cat={"Blog"} />
@@ -41,7 +49,9 @@ function App() {
             <Link to="/filter">
               <NavbarCatBtn cat={"Filter"} />
             </Link>
-            <NavbarCatBtn cat={"Dummmy"} />
+            <Link to="/carousel">
+              <NavbarCatBtn cat={"Carousel"} />
+            </Link>
             <NavbarCatBtn cat={"Dummmy"} />
             <NavbarCatBtn cat={"Dummmy"} />
             <NavbarCatBtn cat={"Dummmy"} />
@@ -52,9 +62,11 @@ function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/tour" element={<TourPage />} />
+        <Route path="/product" element={<ProductPage />} />
         <Route path="/blog" element={<BlogResultPage />} />
         <Route path="/filter" element={<FilterPage />} />
+        <Route path="/carousel" element={<Carousel slides={slides} controls indicators height="500px" />} />
+        <Route path="*" element={<p>404 not found</p>} />
       </Routes>
 
       <footer

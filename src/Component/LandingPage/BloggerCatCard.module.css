@@ -1,3 +1,12 @@
+.overlay {
+  box-shadow: none;
+}
+
+.overlay:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4),
+    0 8px 10px -6px rgb(0 0 0 / 1);
+}
+
 .overlay::after {
   opacity: 0;
   transition: all 0.3s ease;
@@ -15,9 +24,16 @@
   transform: scale(1.1);
 }
 
+.placement {
+  bottom: 10%;
+  left: 15%;
+  transform: translate(0%, 0%)
+}
+
 .overlay:hover .placement {
   bottom: 50%;
-  transform: translate(0%, 50%)
+  left: 50%;
+  transform: translate(-50%, 50%)
 }
 
 .overlay:hover:after {
