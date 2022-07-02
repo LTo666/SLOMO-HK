@@ -94,6 +94,7 @@ export default function LandingPage() {
                   comment={item.comment}
                   price={item.price}
                   location={item.location[1]}
+                  key={id}
                 />
               )
             })}

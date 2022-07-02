@@ -36,7 +36,7 @@ export default function HotProductCard({
           />
 
           <div className="absolute top-[0.6rem] left-[1rem]">
-            <div class="badge badge-primary rounded-lg text-[white] text-base py-[0.8rem]">
+            <div className="badge badge-primary rounded-lg text-[white] text-base py-[0.8rem]">
               Hot
             </div>
           </div>
