@@ -1,9 +1,13 @@
 import FilterCard from "./FilterCard"
-import { useSelector } from 'react-redux'
+import { useSelector } from "react-redux"
 
 export default function FilterResult() {
-  const searchCriteria = useSelector(state => state.searchStore.searchCriteria)
-  const filterCriteria = useSelector(state => state.searchStore.filterCriteria)
+  const searchCriteria = useSelector(
+    (state) => state.searchStore.searchCriteria
+  )
+  const filterCriteria = useSelector(
+    (state) => state.searchStore.filterCriteria
+  )
 
   const data = [
     {
@@ -221,18 +225,24 @@ export default function FilterResult() {
     if (searchCriteria.length === 0) {
       filtered = filtered
     } else {
-      for (let i=0; i<searchCriteria.length; i++) {
-        filtered = filtered.filter((item) => {
-          return item.cat.includes(searchCriteria[i]) || item.location.includes(searchCriteria[i]) || item.title.includes(searchCriteria[i])
-        })
-      }
+      filtered = filtered.filter((item) => {
+        return (
+          item.cat.includes(searchCriteria) ||
+          item.location.includes(searchCriteria) ||
+          item.title.includes(searchCriteria)
+        )
+      })
     }
     if (filterCriteria.length === 0) {
       filtered = filtered
     } else {
-      for (let i=0; i<filterCriteria.length; i++) {
+      for (let i = 0; i < filterCriteria.length; i++) {
         filtered = filtered.filter((item) => {
-          return item.cat.includes(filterCriteria[i]) || item.location.includes(filterCriteria[i])
+          return (
+            item.cat.includes(filterCriteria[i]) ||
+            item.location.includes(filterCriteria[i]) ||
+            item.title.includes(filterCriteria[i])
+          )
         })
       }
     }
@@ -253,9 +263,10 @@ export default function FilterResult() {
 
   return (
     <section className="w-[75%]">
-      <p className="text-xl p-4  bg-base-100 mb-4 rounded-[1rem]">
-        <strong>{`${showResult.length}`}</strong> activities are found.
-      </p>
+      <div className="text-xl py-4 px-6 bg-base-100 mb-4 rounded-[1rem]">
+        <p><strong>Searching Result "{searchCriteria}"</strong></p>
+        <strong>{`${showResult.length}`}</strong> activities with matching criteria are found.
+      </div>
       <div className="grid grid-cols-[repeat(auto-fit,_minmax(17rem,_1fr))] gap-x-4 gap-y-8">
         {showResult}
       </div>

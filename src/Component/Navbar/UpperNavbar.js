@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import NavbarBtn from "./NavbarBtn"
+import SearchInput from "./SearchInput"
 
 export default function UpperNavbar() {
   return (
@@ -8,14 +9,17 @@ export default function UpperNavbar() {
       style={{ borderBottom: "1px solid lightgrey" }}
     >
       <div className="wrapper flex justify-between">
-        <Link to="/">
+        <div className="flex">
+          <Link to="/">
           <NavbarBtn ctn="LOGO/HOME" />
         </Link>
-        <Link to="/filter">Search Bar</Link>
+        <SearchInput  />
+        </div>
 
         <div className="flex">
           <NavbarBtn logo="cart" />
-          <NavbarBtn ctn="Login/SignUp" />
+          <NavbarBtn ctn="SignUp" />
+          <NavbarBtn ctn="Login" />
         </div>
       </div>
     </nav>

@@ -15,7 +15,7 @@ export default function Filter() {
 
   return (
     <div
-      className="h-[75vh] w-[20%] sticky top-[10rem] p-[1rem] bg-base-100 rounded-[1rem]"
+      className="h-[75vh] w-[20%] sticky top-[7rem] p-[1rem] bg-base-100 rounded-[1rem]"
     >
       <div>
         <p className="text-2xl">Location</p>

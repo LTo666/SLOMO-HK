@@ -28,8 +28,10 @@ export default function NavbarBtn({ ctn, logo, alt }) {
     }
   }
 
+  const switchClass = `${style.NavbarBtn} btn rounded-full hover:btn-primary hover:text-[white] NavbarBtn transition-all duration-300 ease-out `
+
   return (
-    <div className={`btn btn-ghost rounded-full hover:btn-primary hover:text-[white] NavbarBtn transition-all duration-300 ease-out ${style.NavbarBtn}`}>
+    <div className={ctn === "Login" ? switchClass + "btn-primary" : switchClass + "btn-ghost"}>
       {!ctn ? logoToSvg() : `${ctn}`}
     </div>
   )
