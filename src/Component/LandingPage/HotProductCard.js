@@ -93,15 +93,15 @@ export default function HotProductCard({
               {star}
               <span className="text-base-content">{` (${sortingComment(
                 comment
-              )}) | ${sortingJoined(joined)}+ joined`}</span>
+              )}) | ${sortingJoined(joined)}+ 人參加過`}</span>
             </p>
           </div>
 
           {price === 0 ? (
-            <p className="text-lg font-semibold pt-[0.5rem]  ">Free</p>
+            <p className="text-lg font-semibold pt-[0.5rem]  ">免費</p>
           ) : (
             <p className="text-sm pt-[0.5rem]">
-              HKD <span className="text-lg font-semibold  ">{price}</span>
+              HK$ <span className="text-lg font-semibold  ">{price}</span>
             </p>
           )}
         </div>

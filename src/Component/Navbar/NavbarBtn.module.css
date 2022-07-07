@@ -1,7 +1,0 @@
-.NavbarBtn:hover .NavbarSvgLogo {
-  fill: white;
-}
-
-.NavbarSvgLogo {
-  fill: hsl(var(--bc));
-}

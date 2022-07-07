@@ -10,10 +10,10 @@ export default function FilterPage() {
       <div className="wrapper">
         <div className="py-6 pl-2 text-md breadcrumbs">
           <ul>
-            <li>
-              <Link to="/">Home</Link>
+            <li className="text-primary">
+              <Link to="/">首頁</Link>
             </li>
-            <li>Hong Kong</li>
+            <li>香港</li>
           </ul>
         </div>
 

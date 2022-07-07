@@ -2,10 +2,11 @@ import { createSlice } from "@reduxjs/toolkit"
 
 export const searchSlice = createSlice({
   name: "search",
-  initialState: { searchCriteria: "", filterCriteria: [] },
+  initialState: { searchCriteria: "", filterCriteria: [], searchHistory: [] },
   reducers: {
     changeSearchCriteria: (state, action) => {
       state.searchCriteria = action.payload
+      state.searchHistory = state.searchHistory.concat([action.payload])
     },
     changeFilterCriteria: (state, action) => {
       if (state.filterCriteria.includes(action.payload) === true) {

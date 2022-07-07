@@ -1,0 +1,22 @@
+.textOverflowDot {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.imgDiv:hover .overlay {
+  background-color: rgba(255, 255, 255, 0.3);
+}

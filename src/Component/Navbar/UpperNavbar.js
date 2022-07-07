@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom"
 import NavbarBtn from "./NavbarBtn"
 import SearchInput from "./SearchInput"
+import ShoppingCartBtn from "./ShoppingCartBtn"
 
 export default function UpperNavbar() {
+
   return (
     <nav
       className="fixed sticky top-0 z-50 text-xl py-[1rem] bg-base-100"
@@ -11,15 +13,15 @@ export default function UpperNavbar() {
       <div className="wrapper flex justify-between">
         <div className="flex">
           <Link to="/">
-          <NavbarBtn ctn="LOGO/HOME" />
-        </Link>
-        <SearchInput  />
+            <NavbarBtn ctn="SLOMO" />
+          </Link>
+          <SearchInput />
         </div>
 
         <div className="flex">
-          <NavbarBtn logo="cart" />
-          <NavbarBtn ctn="SignUp" />
-          <NavbarBtn ctn="Login" />
+          <ShoppingCartBtn />
+          <NavbarBtn ctn="註冊" />
+          <NavbarBtn ctn="登入" />
         </div>
       </div>
     </nav>

@@ -1,8 +1,8 @@
 import style from "./BloggerCatCard.module.css"
 
 export default function BloggerCatCard({ isVdo }) {
-  const divClassName = "w-full aspect-video overflow-hidden rounded-[1rem] relative flex justify-start cursor-pointer transition-all duration-300"
-  const imgClassName = "h-full w-auto absolute top-0 left-0 object-cover"
+  const divClassName = "w-full h-[16rem] overflow-hidden rounded-[1rem] relative flex justify-start cursor-pointer transition-all duration-300"
+  const imgClassName = "h-auto w-full absolute top-0 left-0 object-cover"
   const titleClassName = "z-20 absolute bottom-[2rem] text-[1.75rem] text-[white] transition-all duration-300"
 
   return (
@@ -14,7 +14,7 @@ export default function BloggerCatCard({ isVdo }) {
             alt="Img Blogger"
             className={`${imgClassName}`}
           />
-          <p className={`${titleClassName} ${style.placement}`}>Photo Blogger</p>
+          <p className={`${titleClassName} ${style.placement}`}>相片網誌</p>
         </div>
       ) : (
         <div className={`${divClassName} ${style.overlay}`}>
@@ -23,7 +23,7 @@ export default function BloggerCatCard({ isVdo }) {
             alt="Vdo Blogger"
             className={`${imgClassName}`}
           />
-          <p className={`${titleClassName} ${style.placement}`}>Video Blogger</p>
+          <p className={`${titleClassName} ${style.placement}`}>影片網誌</p>
         </div>
       )}
     </div>

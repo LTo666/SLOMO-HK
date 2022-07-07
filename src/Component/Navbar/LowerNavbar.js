@@ -27,7 +27,9 @@ export default function LowerNavbar() {
         <Link to="/carousel">
           <NavbarCatBtn cat={"Carousel"} />
         </Link>
-        <NavbarCatBtn cat={"Dummmy"} />
+        <Link to="/cart/list">
+          <NavbarCatBtn cat={"Cart List"} />
+        </Link>
         <NavbarCatBtn cat={"Dummmy"} />
         <NavbarCatBtn cat={"Dummmy"} />
         <NavbarCatBtn cat={"Dummmy"} />

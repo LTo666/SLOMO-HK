@@ -31,7 +31,7 @@ export default function FilterCard({ title, location, cat, price }) {
               c36.341,0,65.801,29.461,65.801,65.801C226.742,152.834,197.282,182.294,160.941,182.294z"
             />
           </svg>
-          <p className="pl-2 text-lg">{location}</p>
+          <p className="pl-2 text-base">{location}</p>
         </div>
 
         <div>
@@ -40,7 +40,7 @@ export default function FilterCard({ title, location, cat, price }) {
           })}
         </div>
 
-        {price === 0 ? <p className="text-lg font-semibold pt-[1.25rem]">Free</p> : <p className="text-sm pt-[1.25rem]">HKD <span className="text-lg font-semibold">{price}</span></p> }
+        {price === 0 ? <p className="text-lg font-semibold pt-[1.25rem]">免費</p> : <p className="text-sm pt-[1.25rem]">HK$ <span className="text-xl font-semibold">{price}</span></p> }
 
       </div>
     </div>

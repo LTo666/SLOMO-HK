@@ -21,7 +21,7 @@ export default function HotTopicCard({ title, image }) {
         </div>
         <div className={style.overlay}></div>
 
-        <p className={style.hoverText}>Read More</p>
+        <p className={style.hoverText}>了解更多</p>
       </div>
     </div>
   )

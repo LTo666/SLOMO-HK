@@ -12,7 +12,7 @@ export default function CatCard({ title }) {
       />
 
       <div className="h-[25%] flex pl-[15%] justify-start items-center">
-        <span className="text-2xl">{title}</span>
+        <span className="text-base">{title}</span>
       </div>
     </div>
   )
