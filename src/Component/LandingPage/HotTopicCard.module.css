@@ -5,7 +5,6 @@
   box-shadow: none;
 }
 
-
 .overlay {
   opacity: 0;
   transition: all 0.3s ease-in;
@@ -14,7 +13,19 @@
   bottom: 0px;
   height: 100%;
   position: absolute;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.2);
+}
+
+.gradient::after {
+  opacity: 1;
+  width: 100%;
+  content: "";
+  left: 0px;
+  bottom: 0px;
+  height: 50%;
+  position: absolute;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,1) 100%);
+  z-index: 10;
 }
 
 .image {
@@ -22,6 +33,7 @@
 }
 
 .title {
+  z-index: 20;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

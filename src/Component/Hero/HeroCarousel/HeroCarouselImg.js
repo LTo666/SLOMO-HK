@@ -1,8 +1,7 @@
-export default function CarouselImg({ slide, stopSlide, startSlide, height }) {
+export default function HeroCarouselImg({ slide, startSlide, height }) {
   return (
     <div
-      className="carousel-img"
-      onMouseEnter={stopSlide}
+      className="carouselImg"
       onMouseOut={startSlide}
     >
       <img src={slide} alt="" style={{ width: "100%", height: `${height}`, objectFit: "cover"}} />

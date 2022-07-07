@@ -1,13 +1,13 @@
 
-export default function CatCard({ title }) {
+export default function CatCard({ title, img }) {
   const divClassName =
     "border-solid border-[1px] cursor-pointer w-full aspect-square rounded-[1rem] overflow-hidden hover:scale-110 hover:shadow-2xl transition-all duration-300"
 
   return (
     <div className={divClassName}>
       <img
-        src="https://api.lorem.space/image/shoes?w=400&h=225"
-        alt="Shoes"
+        src={img}
+        alt=""
         className="w-full h-[75%] object-cover"
       />
 

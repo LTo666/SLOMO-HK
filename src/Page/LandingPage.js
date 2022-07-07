@@ -1,60 +1,102 @@
-import Map from "../Component/LandingPage/Map"
-import BloggerCatCard from "../Component/LandingPage/BloggerCatCard"
 import CatCard from "../Component/LandingPage/CatCard"
 import HotTopicCard from "../Component/LandingPage/HotTopicCard"
 import HotProductCard from "../Component/LandingPage/HotProductCard"
+import HotBloggerCard from "../Component/LandingPage/HotBloggerCard"
 import PRODUCT_DATA from "../Data/PRODUCT_DATA.json"
 import { Link } from "react-router-dom"
+import HeroCarousel from "../Component/Hero/HeroCarousel/HeroCarousel"
+import Hero from "../Component/Hero/Hero"
 
 export default function LandingPage() {
   const hotBlogData = [
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
-      img: "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-970-80.jpg.webp",
+      title:
+        "龍蝦灣郊遊徑｜行山路線2小時完！綠蛋島/火石洲/果洲群島360度無敵海景",
+      img: "https://bit.ly/3AOrjqj",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
-      img: "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-970-80.jpg.webp",
+      title: "香港最高山一日遊",
+      img: "https://bit.ly/3yJYNV7",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
-      img: "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-970-80.jpg.webp",
+      title: "寶雲道合家歡樂遊｜新手行山郊遊路線 沿路拜姻緣石",
+      img: "https://bit.ly/3RjdB4g",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
-      img: "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-970-80.jpg.webp",
+      title: "深水埗主教山配水庫免費導賞團5.16起復辦！參觀古羅馬式建築",
+      img: "https://bit.ly/3IjOPgp",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
-      img: "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-970-80.jpg.webp",
+      title: "鶴咀一日遊路線！3個鐘行完 4大必到打卡位 簡單易走＋平路多",
+      img: "https://bit.ly/3NQqC2c",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing cjioexzcgvads",
-      img: "https://cdn.mos.cms.futurecdn.net/gvQ9NhQP8wbbM32jXy4V3j-970-80.jpg.webp",
+      title: "點心中的四大天王",
+      img: "https://bit.ly/3OM9cFo",
     },
   ]
 
   const cat = [
-    { name: "酒店", PATH_URL: "hotel" },
-    { name: "家庭", PATH_URL: "family" },
-    { name: "情侶", PATH_URL: "couple" },
-    { name: "冒險", PATH_URL: "aventure" },
-    { name: "住宿", PATH_URL: "staycation" },
-    { name: "更多", PATH_URL: "more" },
+    {
+      name: "酒店",
+      PATH_URL: "hotel",
+      img: "https://images.trvl-media.com/hotels/1000000/30000/25700/25691/c4afc819.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+    },
+    {
+      name: "家庭",
+      PATH_URL: "family",
+      img: "https://images.lifestyleasia.com/wp-content/uploads/sites/2/2020/10/17165519/hong-kong-best-picnic-spots-west-kowloon-art-park-1024x767.jpg",
+    },
+    {
+      name: "情侶",
+      PATH_URL: "couple",
+      img: "https://d2d5f3568fvb9s.cloudfront.net/wp-content/uploads/2022/01/19145659/Untitled-design-7-960x500.jpg",
+    },
+    {
+      name: "冒險",
+      PATH_URL: "aventure",
+      img: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6a/c9/e8.jpg",
+    },
+    {
+      name: "水療",
+      PATH_URL: "spa",
+      img: "https://www.peninsula.com/-/media/images/hong-kong/wellness/spa/phk-spa-staff-entrance-1074.jpeg?mw=987&hash=BB77AF259A818E5B6BA8B5A2FB2CF428",
+    },
+  ]
+
+  const hotBlogger = [
+    {
+      img: "https://bit.ly/3PbcHVH",
+      name: "Bosco",
+    },
+    {
+      img: "https://bit.ly/3ahgQsB",
+      name: "Charmaine",
+    },
+    {
+      img: "https://bit.ly/3bLm0x6",
+      name: "Chauency",
+    },
+    {
+      img: "https://bit.ly/3bX0CVD",
+      name: "Bruce",
+    },
   ]
 
   return (
     <div className="pb-[4rem]">
-      <Map />
+      <div className="h-[500px]">
+        <Hero />
+      </div>
 
-      <div className="wrapper">
+      <div className="wrapper relative">
         <div>
-          <p className="pt-12 pb-6 text-[2.5rem]">精選類別</p>
+          <p className="pt-16 pb-6 text-[2.5rem]">精選類別</p>
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(8rem,_1fr))] gap-6">
             {cat.map((item, id) => {
               return (
                 <Link to={`/category/${item.PATH_URL}`} key={id}>
-                  <CatCard title={item.name} />
+                  <CatCard title={item.name} img={item.img} />
                 </Link>
               )
             })}
@@ -74,6 +116,7 @@ export default function LandingPage() {
                     comment={item.comment}
                     price={item.price}
                     location={item.location[1]}
+                    img={item.photo_links_1}
                     key={id}
                   />
                 </Link>
@@ -84,9 +127,10 @@ export default function LandingPage() {
 
         <div>
           <p className="pt-12 pb-6 text-[2.5rem]">網誌類別</p>
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(22rem,_1fr))] gap-6">
-            <BloggerCatCard isVdo={false} />
-            <BloggerCatCard isVdo={true} />
+          <div className="grid grid-cols-[repeat(auto-fit,_minmax(16.5rem,_1fr))] gap-6 justify-items-center">
+            {hotBlogger.map((item, id) => {
+              return <HotBloggerCard img={item.img} name={item.name} key={id} />
+            })}
           </div>
         </div>
 

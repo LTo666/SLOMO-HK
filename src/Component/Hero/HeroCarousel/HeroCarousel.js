@@ -1,10 +1,9 @@
 import { useRef, useState, useEffect } from "react"
-import CarouselImg from "./CarouselImg"
-import CarouselControl from "./CarouselControl"
-import CarouselIndicators from "./CarouselIndicators"
-import "./Carousel.css"
+import HeroCarouselImg from "./HeroCarouselImg"
+import HeroCarouselControl from "./HeroCarouselControl"
+import "./HeroCarousel.css"
 
-export default function Carousel({
+export default function HeroCarousel({
   slides,
   interval = 5000,
   controls = false,
@@ -24,11 +23,6 @@ export default function Carousel({
   const next = () => {
     startSlideTimer()
     const index = currentSlide < slides.length - 1 ? currentSlide + 1 : 0
-    setCurrentSlide(index)
-  }
-
-  const switchIndex = (index) => {
-    startSlideTimer()
     setCurrentSlide(index)
   }
 
@@ -56,29 +50,26 @@ export default function Carousel({
   }, [])
 
   return (
-    <div className="carousel" style={{ height: `${height}`, minWidth:"100%" }}>
+    <div className="absolute">
       <div
-        className="carousel-inner"
-        style={{ transform: `translateX(${-currentSlide * 100}%)` }}
+        className="carousel"
+        style={{ height: `${height}`, minWidth: "100%" }}
       >
-        {slides.map((slide, index) => (
-          <CarouselImg
-            slide={slide}
-            key={index}
-            stopSlide={stopSlideTimer}
-            startSlide={startSlideTimer}
-            height={height}
-          />
-        ))}
+        <div
+          className="carouselInner"
+          style={{ transform: `translateX(${-currentSlide * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <HeroCarouselImg
+              slide={slide}
+              key={index}
+              startSlide={startSlideTimer}
+              height={height}
+            />
+          ))}
+        </div>
+        {controls && <HeroCarouselControl prev={prev} next={next} />}
       </div>
-      {indicators && (
-        <CarouselIndicators
-          slides={slides}
-          currentIndex={currentSlide}
-          switchIndex={switchIndex}
-        />
-      )}
-      {controls && <CarouselControl prev={prev} next={next} />}
     </div>
   )
 }

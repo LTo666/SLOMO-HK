@@ -6,7 +6,7 @@ import FilterResult from "../Component/FilterPage/FilterResult"
 export default function FilterPage() {
   return (
     <div className="bg-base-200 pb-[4rem]">
-      <Banner />
+      <Banner src="https://bit.ly/3ajzVtU" height={"20rem"} />
       <div className="wrapper">
         <div className="py-6 pl-2 text-md breadcrumbs">
           <ul>

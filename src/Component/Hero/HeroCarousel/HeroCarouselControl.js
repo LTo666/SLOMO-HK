@@ -1,7 +1,7 @@
-export default function CarouselControl({ prev, next }) {
+export default function HeroCarouselControl({ prev, next }) {
   return (
     <div>
-      <div className="carousel-control left" onClick={prev}>
+      <div className="carouselControl left" onClick={prev}>
         <svg
           version="1.1"
           id="Capa_1"
@@ -22,7 +22,7 @@ export default function CarouselControl({ prev, next }) {
           />
         </svg>
       </div>
-      <div className="carousel-control right" onClick={next}>
+      <div className="carouselControl right" onClick={next}>
         <svg
           version="1.1"
           id="Capa_1"

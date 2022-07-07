@@ -7,6 +7,7 @@ export default function HotProductCard({
   joined,
   comment,
   location,
+  img,
 }) {
   const sortingJoined = (num) => {
     if (num > 999999) {
@@ -31,8 +32,9 @@ export default function HotProductCard({
       <div className={style.HotProductCard}>
         <figure className="h-[10rem] overflow-hidden relative">
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
+            src={img}
+            alt=""
+            className="w-full"
           />
 
           <div className="absolute top-[0.6rem] left-[1rem]">

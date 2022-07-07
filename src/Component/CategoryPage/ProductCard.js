@@ -7,6 +7,7 @@ export default function ProductCard({
   star,
   joined,
   comment,
+  img,
 }) {
   const sortingJoined = (num) => {
     if (num > 999999) {
@@ -31,8 +32,9 @@ export default function ProductCard({
       <div className={style.ProductCard}>
         <figure className="h-[10rem] overflow-hidden relative">
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
+            className="w-full"
+            src={img}
+            alt=""
           />
           <div className={style.overlay}></div>
         </figure>

@@ -5,17 +5,17 @@
   position: relative;
 }
 
-.carousel-inner {
+.carouselInner {
   white-space: nowrap;
   transition: ease 1s;
 }
 
-.carousel-img {
+.carouselImg {
   display: inline-block;
   width: 100%;
 }
 
-.carousel-control {
+.carouselControl {
   border: none;
   display: flex;
   position: absolute;
@@ -27,8 +27,7 @@
 }
 
 .carousel:hover .left,
-.carousel:hover .right,
-.carousel:hover .carousel-indicators {
+.carousel:hover .right {
   opacity: 1;
 }
 
@@ -51,27 +50,6 @@
     rgba(0, 0, 0, 0.9) 100%
   );
   right: 0;
-}
-
-.carousel-indicators {
-  transition: all 0.8s ease;
-  opacity: 0;
-  position: absolute;
-  transform: translateX(-50%);
-  left: 50%;
-  bottom: 1.5em;
-  z-index: 2;
-}
-
-.carousel-indicator-item {
-  width: 15px;
-  height: 15px;
-  border: none;
-  background: #fff;
-  opacity: 0.5;
-  margin: 0.5em;
-  border-radius: 50%;
-  cursor: pointer;
 }
 
 .active {
