@@ -9,8 +9,8 @@ export default function ShoppingCartBtn() {
     <span
       className="indicator-item badge badge-secondary text-[white]"
       style={{
-        top: "0.75rem",
-        right: "1.25rem",
+        top: "0.7rem",
+        right: "1rem",
         fontSize: "0.75rem",
         borderRadius: "100%",
         width: "1px",
@@ -22,22 +22,22 @@ export default function ShoppingCartBtn() {
   )
 
   return (
-    <div>
+    <div className="btn btn-ghost" style={{padding: "0", borderRadius: "100%",}}>
       <div
-        className="indicator btn rounded-full transition-all duration-300 ease-out btn-ghost"
+        className="indicator btn h-[full] aspect-square rounded-full transition-all duration-300 ease-out btn-ghost hover:bg-opacity-0"
         onClick={() => {
           navigate("/cart/list")
         }}
+        style={{padding: "0px"}}
       >
         {indicator}
         <svg
           version="1.1"
           id="Cart"
           xmlns="http://www.w3.org/2000/svg"
-          x="0px"
-          y="0px"
           viewBox="0 0 16 16"
-          width="1.5rem"
+          width="1.25rem"
+          height="1.25rem"
           fill="currentColor"
         >
           <path

@@ -1,26 +1,27 @@
 import { useNavigate } from "react-router-dom"
 import CartProductCard from "./CartProductCard"
 import { useState } from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { placeOrder } from "../../Redux/orderSlice"
 import { clearCart } from "../../Redux/cartSlice"
 
-export default function FillAndPay({ shopData }) {
-  const shoppingList = shopData
+export default function FillAndPay() {
+  const shopData = useSelector((state) => state.cartStore.cartList)
+  const userInfo = useSelector((state) => state.authStore.userInfo)
   const navigate = useNavigate()
-  const [name, setName] = useState("")
+  const [name, setName] = useState(userInfo.username)
   const [contactNo, setContactNo] = useState("")
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState(userInfo.email)
   const [payment, setPayment] = useState("")
   const [creditCardNo, setCreditCardNo] = useState("")
   const [CSV, setCSV] = useState("")
   const dispatch = useDispatch()
 
   const CartProductElems =
-    shoppingList.length > 0 &&
-    shoppingList.map((item, id) => {
+    shopData.length > 0 &&
+    shopData.map((item, id) => {
       let isLast = false
-      if (shoppingList.length - 1 === id) {
+      if (shopData.length - 1 === id) {
         isLast = true
       }
       return (
@@ -41,15 +42,15 @@ export default function FillAndPay({ shopData }) {
     })
 
   const totalPrice =
-    shoppingList.length > 0 &&
-    shoppingList
+    shopData.length > 0 &&
+    shopData
       .map((item) => item.price)
       .reduce((acc, cur) => {
         return acc + cur
       })
 
   const order = {
-    orders: [...shoppingList],
+    orders: [...shopData],
     customerName: name,
     customerEmail: email,
     customerContactNo: contactNo,
@@ -68,7 +69,7 @@ export default function FillAndPay({ shopData }) {
     setPayment("")
     setCreditCardNo("")
     dispatch(clearCart())
-    shoppingList.length > 0 && navigate("/cart/ordered")
+    shopData.length > 0 && navigate("/cart/ordered")
   }
 
   return (
@@ -119,7 +120,9 @@ export default function FillAndPay({ shopData }) {
             </label>
           </div>
         </div>
+
         <div className="divider divider-horizontal"></div>
+
         <div className=" flex-grow card bg-base-100 rounded-box w-[34rem] rounded-[1rem]">
           <div
             className="text-[2rem] py-4 px-12"
@@ -171,7 +174,7 @@ export default function FillAndPay({ shopData }) {
                         : setPayment("")
                     }
                   />
-                  <span className="label-text pl-4">Master</span>
+                  <span className="label-text pl-4">American Express</span>
                 </label>
               </div>
             </div>
@@ -224,21 +227,45 @@ export default function FillAndPay({ shopData }) {
         </div>
       </div>
 
-      <div className="bg-base-100 rounded-box w-full flex justify-end items-center py-6">
-        <div className="text-end">
-          <p className="text-[1.5rem] leading-8 text-primary font-bold">
-            HK$ {totalPrice}
-          </p>
-          <p className="text-[0.75rem] leading-4">
-            {shoppingList.length} 件商品
-          </p>
-        </div>
-        <div className="ml-4 mr-8">
-          <div
-            className="btn rounded-[0.5rem] transition-all duration-300 ease-out btn-primary w-full text-lg"
-            onClick={() => placeOrderFunc()}
+      <div className="bg-base-100 rounded-box w-full flex justify-between items-center py-6">
+
+      <div className="ml-8 mr-[3rem] text-primary flex">
+          <svg
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512 512"
+            width="1rem"
+            fill="currentColor"
           >
-            確認付款
+            <path
+              d="M328.2,53.3c-23.8,23.8-47.6,47.6-71.4,71.4s-47.6,47.6-71.4,71.4c-13.5,13.5-26.9,26.9-40.4,40.4
+              c-10.5,10.5-10.5,28.4,0,38.9c23.8,23.8,47.6,47.6,71.4,71.4s47.6,47.6,71.4,71.4c13.5,13.5,26.9,26.9,40.4,40.4
+              c5,5,12.4,8.1,19.4,8.1c3.8,0.1,7.3-0.6,10.6-2.4c3.4-1.1,6.4-3,8.9-5.7c4.8-5.2,8.4-12.1,8.1-19.4c-0.3-7.3-2.8-14.2-8.1-19.4
+              c-23.8-23.8-47.6-47.6-71.4-71.4c-23.8-23.8-47.6-47.6-71.4-71.4c-13.5-13.5-26.9-26.9-40.4-40.4c0,13,0,25.9,0,38.9
+              c23.8-23.8,47.6-47.6,71.4-71.4s47.6-47.6,71.4-71.4c13.5-13.5,26.9-26.9,40.4-40.4c5-5,8.1-12.4,8.1-19.4
+              c0.1-3.8-0.6-7.3-2.4-10.6c-1.1-3.4-3-6.4-5.7-8.9c-5.2-4.8-12.1-8.4-19.4-8.1C340.3,45.6,333.4,48.1,328.2,53.3L328.2,53.3z"
+            />
+          </svg>
+          <span className="ml-4 hover:underline cursor-pointer" onClick={()=>{navigate(-1)}}>返回購物車</span>
+        </div>
+
+        <div className="flex">
+          <div className="text-end">
+            <p className="text-[1.5rem] leading-8 text-primary font-bold">
+              HK$ {totalPrice}
+            </p>
+            <p className="text-[0.75rem] leading-4">{shopData.length} 件商品</p>
+          </div>
+          <div className="ml-4 mr-8">
+            <div
+              className="btn rounded-[0.5rem] transition-all duration-300 ease-out btn-primary w-full text-lg"
+              onClick={() => placeOrderFunc()}
+            >
+              確認付款
+            </div>
           </div>
         </div>
       </div>

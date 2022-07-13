@@ -6,7 +6,7 @@ export default function LowerNavbar() {
   const fixedClass = "text-lg bg-base-100"
   const switchSticky =
     location.pathname === "/"
-      ? `fixed sticky top-[5rem] z-20 ${fixedClass}`
+      ? `fixed sticky top-[5.3rem] z-20 ${fixedClass}`
       : fixedClass
 
   return (
@@ -14,25 +14,49 @@ export default function LowerNavbar() {
       className={switchSticky}
       style={{ borderBottom: "1px solid lightgrey" }}
     >
-      <div className="wrapper flex justify-around">
-        <Link to="/product">
-          <NavbarCatBtn cat={"Product"} />
-        </Link>
-        <Link to="/blog">
-          <NavbarCatBtn cat={"Blog"} />
-        </Link>
+      <div className="wrapper flex">
+
         <Link to="/filter">
-          <NavbarCatBtn cat={"Filter"} />
+          <NavbarCatBtn cat={"漫遊香港"} />
         </Link>
-        <Link to="/carousel">
-          <NavbarCatBtn cat={"Carousel"} />
+
+        <Link to="/category/family">
+          <NavbarCatBtn cat={"家庭"} />
         </Link>
-        <Link to="/cart/list">
-          <NavbarCatBtn cat={"Cart List"} />
+
+        <Link to="/category/couple">
+          <NavbarCatBtn cat={"情侶"} />
         </Link>
-        <NavbarCatBtn cat={"Dummmy"} />
-        <NavbarCatBtn cat={"Dummmy"} />
-        <NavbarCatBtn cat={"Dummmy"} />
+
+        <Link to="/category/adventure">
+          <NavbarCatBtn cat={"冒險"} />
+        </Link>
+
+        <Link to="/category/hotel">
+          <NavbarCatBtn cat={"酒店住宿"} />
+        </Link>
+
+        <Link to="/category/restaurant">
+          <NavbarCatBtn cat={"餐廳"} />
+        </Link>
+
+        <NavbarCatBtn cat={"Spa及按摩"} />
+
+        <NavbarCatBtn cat={"精選活動"} />
+
+        <NavbarCatBtn cat={"交通"} />
+
+        <Link to="/bloggerlist">
+          <NavbarCatBtn cat={"冒險家"} />
+        </Link>
+
+        <NavbarCatBtn cat={"熱門網誌"} />
+
+        <NavbarCatBtn cat={"禮品兌換"} islast />
+
+        {/* <Link to="/blogui">
+          <NavbarCatBtn cat={"Blog UI"} />
+        </Link> */}
       </div>
     </nav>
   )

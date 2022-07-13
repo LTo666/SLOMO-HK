@@ -66,9 +66,9 @@ export default function HotProductCard({
 
         <div>
           <div className={`${style.Title} mb-[0.6rem]`}>
-            <strong className="text-xl" style={{ lineHeight: "1.5rem" }}>
+            <h6 className="text-xl font-medium" style={{ lineHeight: "1.5rem" }}>
               {title}
-            </strong>
+            </h6>
           </div>
 
           <div className="flex pb-1">
@@ -93,7 +93,7 @@ export default function HotProductCard({
             </svg>
             <p className="pl-1 text-sm text-primary">
               {star}
-              <span className="text-base-content">{` (${sortingComment(
+              <span className="text-base-content text-zinc-400">{` (${sortingComment(
                 comment
               )}) | ${sortingJoined(joined)}+ 人參加過`}</span>
             </p>

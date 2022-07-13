@@ -4,7 +4,6 @@ import HotProductCard from "../Component/LandingPage/HotProductCard"
 import HotBloggerCard from "../Component/LandingPage/HotBloggerCard"
 import PRODUCT_DATA from "../Data/PRODUCT_DATA.json"
 import { Link } from "react-router-dom"
-import HeroCarousel from "../Component/Hero/HeroCarousel/HeroCarousel"
 import Hero from "../Component/Hero/Hero"
 
 export default function LandingPage() {
@@ -54,32 +53,46 @@ export default function LandingPage() {
     },
     {
       name: "冒險",
-      PATH_URL: "aventure",
+      PATH_URL: "adventure",
       img: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/6a/c9/e8.jpg",
     },
     {
-      name: "水療",
-      PATH_URL: "spa",
-      img: "https://www.peninsula.com/-/media/images/hong-kong/wellness/spa/phk-spa-staff-entrance-1074.jpeg?mw=987&hash=BB77AF259A818E5B6BA8B5A2FB2CF428",
+      name: "餐廳",
+      PATH_URL: "restaurant",
+      img: "https://images.lifestyleasia.com/wp-content/uploads/sites/2/2022/01/06235301/new-dining-restrictions-hours-1600x900.jpg",
     },
   ]
 
   const hotBlogger = [
     {
+      bloggerId: "1",
       img: "https://bit.ly/3PbcHVH",
       name: "Bosco",
     },
     {
+      bloggerId: "2",
       img: "https://bit.ly/3ahgQsB",
       name: "Charmaine",
     },
     {
+      bloggerId: "3",
       img: "https://bit.ly/3bLm0x6",
       name: "Chauency",
     },
     {
+      bloggerId: "4",
       img: "https://bit.ly/3bX0CVD",
       name: "Bruce",
+    },
+    {
+      bloggerId: "5",
+      img: "https://static.toiimg.com/thumb/msid-20728080,width-800,height-600,resizemode-75/20728080.jpg",
+      name: "Sid",
+    },
+    {
+      bloggerId: "6",
+      img: "http://i1.wp.com/inews.gtimg.com/newsapp_match/0/8942943916/0",
+      name: "Ada",
     },
   ]
 
@@ -91,7 +104,7 @@ export default function LandingPage() {
 
       <div className="wrapper relative">
         <div>
-          <p className="pt-16 pb-6 text-[2.5rem]">精選類別</p>
+          <p className="pt-20 pb-10 text-[2.25rem] font-medium">精選類別</p>
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(8rem,_1fr))] gap-6">
             {cat.map((item, id) => {
               return (
@@ -104,7 +117,7 @@ export default function LandingPage() {
         </div>
 
         <div>
-          <p className="pt-12 pb-6 text-[2.5rem]">熱門活動</p>
+          <p className="pt-20 pb-10 text-[2.25rem] font-medium">熱門活動</p>
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] gap-x-4 gap-y-8 justify-items-center">
             {PRODUCT_DATA.map((item, id) => {
               return (
@@ -126,16 +139,20 @@ export default function LandingPage() {
         </div>
 
         <div>
-          <p className="pt-12 pb-6 text-[2.5rem]">網誌類別</p>
-          <div className="grid grid-cols-[repeat(auto-fit,_minmax(16.5rem,_1fr))] gap-6 justify-items-center">
+          <p className="pt-20 pb-10 text-[2.25rem] font-medium">人氣冒險家</p>
+          <div className="grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] gap-6 justify-items-center">
             {hotBlogger.map((item, id) => {
-              return <HotBloggerCard img={item.img} name={item.name} key={id} />
+              return (
+                <Link to={`/blogger/${item.bloggerId}`} key={id}>
+                  <HotBloggerCard img={item.img} name={item.name} />
+                </Link>
+              )
             })}
           </div>
         </div>
 
         <div>
-          <p className="pt-12 pb-6 text-[2.5rem]">近期熱門網誌</p>
+          <p className="pt-20 pb-10 text-[2.25rem] font-medium">近期熱門網誌</p>
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-6">
             {hotBlogData.map((item, id) => {
               return (

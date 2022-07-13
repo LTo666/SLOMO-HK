@@ -11,7 +11,7 @@ export default function OrderedProduct({
       <div className="mr-4">
         <img src={img} alt="" className="w-[12rem] h-auto" />
       </div>
-      <div className="mt-2">
+      <div>
         <p>產品編號：{pid}</p>
         <p>產品名稱：{name}</p>
         <p>使用日期：{date}</p>

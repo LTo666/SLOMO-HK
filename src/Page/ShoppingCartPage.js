@@ -1,11 +1,6 @@
-import { useLocation, useNavigate } from "react-router-dom"
-import Cart from "../Component/ShoppingCartPage/Cart"
-import FillAndPay from "../Component/ShoppingCartPage/FillAndPay"
-import { useSelector } from "react-redux"
-import SubmitedOrder from "../Component/ShoppingCartPage/SubmitedOrder"
+import { Navigate, Outlet, useLocation, useNavigate } from "react-router-dom"
 
 export default function ShoppingCartPage() {
-  const shopData = useSelector((state) => state.cartStore.cartList)
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -22,20 +17,20 @@ export default function ShoppingCartPage() {
           <li className="step step-primary text-primary text-xl font-semibold">填寫資料與付款</li>
           <li className="step">訂購完成</li>
         </ul>
-    ) : (
+    ) :location.pathname === "/cart/ordered" ? (
       <ul className="steps py-8">
           <li className="step step-primary mx-16 font-semibold">購物車</li>
           <li className="step step-primary font-semibold">填寫資料與付款</li>
           <li className="step step-primary text-primary text-xl">訂購完成</li>
         </ul>
-    )
+    ) : <Navigate to="/error" />
 
   return (
     <div className="bg-base-200 min-h-[50rem]">
       <div className="wrapper">
         <div className="pb-10">
           <div className="flex justify-center">{currentStep}</div>
-          {location.pathname === "/cart/list" ? <Cart shopData={shopData} /> : location.pathname === "/cart/fillnpay" ? <FillAndPay shopData={shopData} /> : <SubmitedOrder />}
+          <Outlet/>
         </div>
       </div>
     </div>

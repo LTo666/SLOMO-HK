@@ -1,8 +1,9 @@
+import { useSelector } from "react-redux"
 import CartListWithoutProduct from "./CartListWithoutProduct"
 import CartListWithProduct from "./CartListWithProduct"
 
-export default function Cart({ shopData }) {
-  const shoppingList = shopData
+export default function Cart() {
+  const shopData = useSelector((state) => state.cartStore.cartList)
 
   return (
     <div className="bg-base-100 rounded-[1rem]">
@@ -12,10 +13,10 @@ export default function Cart({ shopData }) {
       >
         購物車
       </div>
-      {shoppingList.length === 0 ? (
-        <CartListWithoutProduct />
+      {shopData.length > 0 ? (
+        <CartListWithProduct shoppingList={shopData} />
       ) : (
-        <CartListWithProduct shoppingList={shoppingList}/>
+        <CartListWithoutProduct />
       )}
     </div>
   )

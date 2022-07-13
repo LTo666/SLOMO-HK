@@ -46,7 +46,7 @@ export default function ProductCard({
           </div>
 
           <div className={`${style.Title} mb-[0.4rem]`}>
-            <p className="text-md" style={{ lineHeight: "1.5rem" }}>
+            <p className="text-md text-zinc-600" style={{ lineHeight: "1.5rem" }}>
               {description}
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function ProductCard({
             </svg>
             <p className="pl-1 text-sm text-primary">
               {star}
-              <span className="text-base-content">{` (${sortingComment(
+              <span className="text-base-content text-zinc-400">{` (${sortingComment(
                 comment
               )}) | ${sortingJoined(joined)}+ joined`}</span>
             </p>

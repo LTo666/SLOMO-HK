@@ -11,7 +11,7 @@ export default function CatCard({ title, img }) {
         className="w-full h-[75%] object-cover"
       />
 
-      <div className="h-[25%] flex pl-[15%] justify-start items-center">
+      <div className="h-[25%] flex pl-[15%] justify-start items-center font-medium">
         <span className="text-base">{title}</span>
       </div>
     </div>

@@ -1,7 +1,6 @@
 import FilterCard from "./FilterCard"
 import { useSelector } from "react-redux"
 import PRODUCT_DATA from "../../Data/PRODUCT_DATA.json"
-import { Link } from "react-router-dom"
 
 export default function FilterResult() {
   const searchCriteria = useSelector(
@@ -40,17 +39,17 @@ export default function FilterResult() {
     return filtered
   }
 
-  const showResult = result().map((item) => {
+  const showResult = result().map((item, id) => {
     return (
-      <Link to={`/product/${item.pid}`} key={item.pid}>
         <FilterCard
           title={item.name}
           cat={item.category}
           location={item.location[1]}
           price={item.price}
-          key={item.pid}
+          img={item.photo_links_1}
+          pid={item.pid}
+          key={id}
         />
-      </Link>
     )
   })
 

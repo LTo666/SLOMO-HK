@@ -1,0 +1,3 @@
+.hoverDiv:hover .hoverP {
+  color: hsl(var(--p));
+}

@@ -1,17 +1,21 @@
+import { useNavigate } from "react-router-dom"
 import Style from "./FilterCard.module.css"
 
-export default function FilterCard({ title, location, cat, price }) {
+export default function FilterCard({ title, location, cat, price, img, pid }) {
+  const navigate = useNavigate()
+
   return (
-    <div className={`${Style.TourCard}`}>
+    <div className={`${Style.TourCard}`} onClick={()=>navigate(`/product/${pid}`)}>
       <figure className="h-[10rem] overflow-hidden">
         <img
-          src="https://api.lorem.space/image/shoes?w=400&h=225"
+          src={img}
           alt="Shoes"
+          className="w-full"
         />
       </figure>
       <div>
         <div className={Style.Title}>
-          <strong className="text-xl" style={{lineHeight: "1.5rem"}}>{title}</strong>
+          <h6 className="text-xl font-semibold" style={{lineHeight: "1.5rem"}}>{title}</h6>
         </div>
 
         <div className="flex pb-1">
@@ -31,16 +35,16 @@ export default function FilterCard({ title, location, cat, price }) {
               c36.341,0,65.801,29.461,65.801,65.801C226.742,152.834,197.282,182.294,160.941,182.294z"
             />
           </svg>
-          <p className="pl-2 text-base">{location}</p>
+          <p className="pl-2 text-base text-zinc-600">{location}</p>
         </div>
 
         <div>
           {cat && cat.length !== 0 && cat.map((item, i) => {
-            return <div className="badge badge-outline rounded-md mr-2 text-xs" key={i}>{item}</div>
+            return <div className="badge badge-outline rounded-md mr-2 text-xs text-zinc-600" key={i}>{item}</div>
           })}
         </div>
 
-        {price === 0 ? <p className="text-lg font-semibold pt-[1.25rem]">免費</p> : <p className="text-sm pt-[1.25rem]">HK$ <span className="text-xl font-semibold">{price}</span></p> }
+        {price === 0 ? <p className="text-lg font-semibold pt-[1.25rem] text-zinc-800">免費</p> : <p className="text-sm pt-[1.25rem] text-zinc-400">HK$ <span className="text-xl font-semibold text-base-content">{price}</span></p> }
 
       </div>
     </div>
