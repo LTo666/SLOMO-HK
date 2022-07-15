@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <div className="relative">
-      <HeroCarousel slides={slides} controls indicators height="500px" />
+      <HeroCarousel slides={slides} controls indicators autoPlay height="500px" interval={slides.length * 2000} />
       <div className="wrapper">
         <div className="relative w-[100%] h-[500px] z-10">
           <div className="absolute text-[white] ml-2" style={{ top: "130px" }}>

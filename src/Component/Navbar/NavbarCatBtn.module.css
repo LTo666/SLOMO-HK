@@ -6,5 +6,5 @@
 
 .NavbarCatBtn:hover {
   color: hsl(var(--p));
-  border-bottom: 3px solid rgba(55, 205, 190, 1);
+  border-bottom: 3px solid hsl(var(--p));
 }

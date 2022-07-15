@@ -16,10 +16,10 @@ export default function CartListWithProduct({ shoppingList }) {
       }
       return (
         <CartProductCard
-          image={item.photo_links_1}
+          image={item.photo_links[0]}
           title={item.name}
           desc={item.description}
-          date={"dd-mm-yyyy"}
+          date={item.date}
           amount={"1"}
           price={item.price}
           pid={item.pid}
@@ -62,7 +62,7 @@ export default function CartListWithProduct({ shoppingList }) {
 
   return (
     <div>
-      <div className="px-8 py-6 min-h-[20rem]">{CartProductElems}</div>
+      <div className="px-8 py-6 min-h-[25rem]">{CartProductElems}</div>
 
       <div
         className="flex flex-rows items-end px-8 pt-4 pb-6 gap-4"

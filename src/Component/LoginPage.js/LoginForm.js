@@ -9,15 +9,15 @@ export default function LoginForm({ signup }) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [username, setUsername] = useState("")
+  const [signUpSuccess, setSignUpSuccess] = useState("")
   const dispatch = useDispatch()
 
   const signupFunc = () => {
-    console.log("signup redux thunk")
     dispatch(signupThunk(email, password, username))
+    setSignUpSuccess("快速註冊成功！")
   }
 
   const loginFunc = () => {
-    console.log("loginin redux thunk")
     dispatch(loginThunk(email, password))
   }
 
@@ -69,11 +69,12 @@ export default function LoginForm({ signup }) {
           >
             {currentPurpose}
           </div>
+          {signUpSuccess && <p className="text-secondary text-center pt-8 text-lg">{signUpSuccess}</p>}
         </div>
       </div>
-      <div className="h-[5rem] bg-[#000000] px-[3rem] flex justify-between items-center text-white">
+      <div className="h-[5rem] bg-[#FFF8D1] px-[3rem] flex justify-between items-center text-primary-content">
         <div className="text-sm">
-          {signup ? "已有Klook帳號？" : "還沒有帳號？現在註冊！"}
+          {signup ? "已有SloMo帳號？" : "還沒有帳號？現在註冊！"}
         </div>
         {signup ? (
           <Link to="/login">

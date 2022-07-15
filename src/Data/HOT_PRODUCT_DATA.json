@@ -1,0 +1,66 @@
+[
+  {
+    "pid": 1,
+    "name": "大澳文物酒店｜香港最純樸的文化特色｜大澳警署活化",
+    "description": "酒店位於悠然恬靜的大澳漁村，由建於1902年的舊大澳警署活化而成，展現出香港最純樸的文化特色。建築仍然保留其原有的文化特色，具有濃厚的殖民地色彩。舊大澳警署由三個部份組成，一座兩層高的主樓及附屬建築，以及其後增建的一層高樓房，均是典型的殖民地風格建築。現以玻璃室設計改建為雅致的餐廳，殖民地風格的典雅裝潢，以及沿用了China Tee Club饋贈的精緻曲木傢俱，閒賞翠綠樹景及南中國海的優美景致。",
+    "photo_links": [
+      "https://cdn.hk01.com/di/media/images/dw/20220609/611557861536829440206798.jpeg/DRs0tO9sLovYfgYitCJih7056YwBIVqaqwmXWKsJl1g?v=w1280",
+      "https://resource02.ulifestyle.com.hk/ublog/post/w960/202009/1601373602_img-5282.jpeg",
+      "https://travel.ulifestyle.com.hk/cms/news_photo/original/20200818221352__fb963e-TOHH-corridor-2018-MW.jpg"
+    ],
+    "category": ["情侶", "酒店"],
+    "location": ["香港", "離島區", "大澳"],
+    "price": 2550,
+    "star": 4.5,
+    "joined": 34536,
+    "comment": 9884
+  },
+  {
+    "pid": 2,
+    "name": "Moonin主題酒店｜香港愉景灣酒店｜特色主題酒店",
+    "description": "全港首個姆明主題酒店，入住酒店己包括主題下午茶，並會送出限定禮品包括姆明拖鞋、姆明行李牌、姆明旅行用品。適合一家大小假日遊。整間酒店都充滿姆明與一班朋友，超多必到打卡位，猶如走進姆明谷一樣。整間酒店包括酒店入口、大堂、餐廳、主題樓層及房間都是姆明與一班朋友的蹤影。",
+    "photo_links": [
+      "https://hk.ulifestyle.com.hk/cms/images/event/1024/202206/20220614181415_1_1655201655.jpg",
+      "https://www.bigfuntrip.com/wp-content/uploads/2022/06/14aubergediscoverybay03.jpg",
+      "https://s.yimg.com/ny/api/res/1.2/wZXas1eKGamykVu221O4yw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MA--/https://s.yimg.com/os/creatr-uploaded-images/2022-06/2583e1c0-ef68-11ec-bfa4-239b2f60121b"
+    ],
+    "category": ["酒店", "家庭"],
+    "location": ["香港", "離島區", "愉景灣"],
+    "price": 1580,
+    "star": 4.5,
+    "joined": 4574567,
+    "comment": 2799853
+  },
+  {
+    "pid": 3,
+    "name": "360 大嶼山文化探索深度遊｜感受大嶼山及大澳文化風情",
+    "description": "悠遊大澳漁村，感受香港威尼斯水鄉風情。搭乘昂坪360纜車，居高臨下俯瞰北大嶼山郊野公園，以及天壇大佛宏偉壯麗的景色。遊覽大澳漁村特色棚屋，品嚐大澳特式小吃。大澳漁村多年來都保留了香港傳統漁村的風土人情，每次入到大澳，總教人放慢腳步，慢慢細味四周。一棟棟水上棚屋更是必定不能錯過的獨特景觀。大澳舉辦了「 一壁一畫一故事 」，增添多幅壁畫，大部份以大澳風情為主題，分佈於不同角落，大家漫步大澳時不妨留意四周美麗的3D 打卡位。",
+    "photo_links": [
+      "https://hkow.hk/wp-content/uploads/2019/11/tai-o-village-stilt-house.jpg",
+      "https://www.discoverhongkong.com/content/dam/dhk/gohk/images/routes/ngong-ping/poi-images/stop4/POI_4_The_Big_Buddha_2.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Ngong_Ping_360_Cable_Car_and_HKG_2021-09.jpg/480px-Ngong_Ping_360_Cable_Car_and_HKG_2021-09.jpg"
+    ],
+    "category": ["冒險", "家庭"],
+    "location": ["香港", "離島區", "大嶼山", "大澳"],
+    "price": 400,
+    "star": 5,
+    "joined": 54672345,
+    "comment": 2456435
+  },
+  {
+    "pid": 4,
+    "name": "Mosu Hong Kong｜香港M+博物館｜韓國高級特色餐廳",
+    "description": "Mosu Hong Kong 位於 M+ 大樓三樓，作為米其林二星、韓國高級餐廳 Mosu Seoul 的第一家海外分店。餐廳致力提供港韓結合的創新口味，在藝術館體驗藝術之餘，也能享受頂級的餐飲文化，品嚐美食。來自首爾的精巧細膩滋味，餐廳由榮獲首爾米芝蓮二星的行政總廚Sung Anh掌舵，他巧妙地運用時令食材，並注入當代料理巧思，重塑韓式精緻佳餚，創造出獨一無二的餐飲體驗。",
+    "photo_links": [
+      "https://s.yimg.com/ny/api/res/1.2/5mZlIFJRsTMFWyfqgsDdwg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTY0MA--/https://s.yimg.com/uu/api/res/1.2/kKKDW4FCHfRuq5sQVcgSnQ--~B/aD00MDA7dz02MDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/marie_claire_729/7265defdfcd8c41805bd7641895cda63",
+      "https://s.yimg.com/ny/api/res/1.2/9W9XpOnalUAK0_8mpaopVQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MA--/https://s.yimg.com/uu/api/res/1.2/amXze_Drr_zhdguXjke5ug--~B/aD0wO3c9MDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/marie_claire_729/8c47d61363ba0bc9eebd6a795eb6329b",
+      "https://images-ext-2.discordapp.net/external/ATT-69CxiNoK9IeUWvjAEn6fA1NHdNbaFV6J-WRB_ZM/%3Fformat%3D2500w/https/images.squarespace-cdn.com/content/v1/5ac2ddf285ede15e39a57666/83abb61e-68ca-4805-9e48-2668892a6e5e/Design-Anthology-2022-06-MOSU-by-LAAB-Architects%252C-Hong-Kong_Interior_Day_Apr2022-%25284%2529.jpg?width=1584&height=1056"
+    ],
+    "category": ["餐廳"],
+    "location": ["香港", "九龍", "尖沙咀", "西九文化區"],
+    "price": 1500,
+    "star": 4.5,
+    "joined": 20000,
+    "comment": 2668
+  }
+]

@@ -4,7 +4,7 @@ export default function NavbarBtn({ ctn }) {
 
   const navBarBtnClass =
     ctn === "登入" || ctn === "登出"
-      ? switchClass + "btn-primary"
+      ? switchClass + "btn-primary text-primary-content"
       : switchClass + "btn-ghost"
   
   return <div className={navBarBtnClass}>{ctn}</div>

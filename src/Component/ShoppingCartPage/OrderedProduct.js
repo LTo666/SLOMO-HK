@@ -7,9 +7,9 @@ export default function OrderedProduct({
   amount,
 }) {
   return (
-    <div className="w-full flex ">
+    <div className="w-full flex">
       <div className="mr-4">
-        <img src={img} alt="" className="w-[12rem] h-auto" />
+        <img src={img} alt="" className="w-[12rem] h-auto object-cover" />
       </div>
       <div>
         <p>產品編號：{pid}</p>

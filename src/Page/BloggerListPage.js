@@ -7,7 +7,7 @@ export default function BloggerListPage() {
   const bloggers = BLOGGER_DATA
 
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-100">
       <div className="w-full h-[20rem] relative">
         <img
           src="https://bit.ly/3ajzVtU"

@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import { logoutThunk } from "../../Redux/authSlice"
 import CartBtnList from "./CartBtnList"
+import LogoHomeBtn from "./LogoHomeBtn"
 import NavbarBtn from "./NavbarBtn"
 import SearchInput from "./SearchInput"
 import ShoppingCartBtn from "./ShoppingCartBtn"
@@ -19,9 +20,9 @@ export default function UpperNavbar({ isLoggedIn }) {
       style={{ borderBottom: "1px solid lightgrey" }}
     >
       <div className="wrapper flex justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center space-x-4">
           <Link to="/">
-            <NavbarBtn ctn="SLOMO" />
+            <LogoHomeBtn height="2.25rem" />
           </Link>
           <SearchInput />
         </div>
@@ -46,18 +47,18 @@ export default function UpperNavbar({ isLoggedIn }) {
           </ul>
 
           {isLoggedIn ? (
-            <div class="dropdown dropdown-end">
+            <div className="dropdown dropdown-end">
               <label
-                tabindex="0"
-                class="btn btn-ghost avatar online placeholder rounded-full w-[3rem] h-[3rem] cursor-pointer hover:ring hover:ring-primary p-0"
+                tabIndex="0"
+                className="btn btn-ghost avatar online placeholder rounded-full w-[3rem] h-[3rem] cursor-pointer hover:ring hover:ring-primary p-0"
               >
                 <div className="bg-neutral-focus text-neutral-content rounded-full w-full ">
                   <span className="text-xl">{surnameFirstLetter}</span>
                 </div>
               </label>
               <ul
-                tabindex="0"
-                class="menu menu-compact dropdown-content mt-3 p-2 bg-base-100 rounded-box w-[10rem] gap-y-2"
+                tabIndex="0"
+                className="menu menu-compact dropdown-content mt-3 p-2 bg-base-100 rounded-box w-[10rem] gap-y-2"
                 style={{
                   boxShadow:
                     "0 1px 4px 0 rgb(0 0 0 / 0.2), 0 1px 16px -1px rgb(0 0 0 / 0.3)",
@@ -75,7 +76,7 @@ export default function UpperNavbar({ isLoggedIn }) {
                 </li>
                 <li className="hover:bg-base-100 rounded-full">
                   <div
-                    className="w-full btn btn-primary text-center"
+                    className="w-full btn btn-primary text-center text-primary-content"
                     onClick={() => dispatch(logoutThunk())}
                   >
                     登出

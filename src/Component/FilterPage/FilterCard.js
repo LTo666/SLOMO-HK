@@ -9,7 +9,7 @@ export default function FilterCard({ title, location, cat, price, img, pid }) {
       <figure className="h-[10rem] overflow-hidden">
         <img
           src={img}
-          alt="Shoes"
+          alt=""
           className="w-full"
         />
       </figure>
@@ -18,7 +18,7 @@ export default function FilterCard({ title, location, cat, price, img, pid }) {
           <h6 className="text-xl font-semibold" style={{lineHeight: "1.5rem"}}>{title}</h6>
         </div>
 
-        <div className="flex pb-1">
+        <div className="flex pb-1 text-primary">
           <svg
             version="1.1"
             id="Capa_1"
@@ -27,7 +27,7 @@ export default function FilterCard({ title, location, cat, price, img, pid }) {
             y="0px"
             viewBox="0 0 321.883 321.883"
             width="1.5rem"
-            fill="#37CDBE"
+            fill="currentColor"
           >
             <path
               d="M160.941,0c-69.035,0-125,55.964-125,125.001c0,69.035,85.187,196.882,125,196.882c39.813,0,125-127.847,125-196.882

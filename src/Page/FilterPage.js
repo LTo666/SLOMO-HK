@@ -25,7 +25,7 @@ export default function FilterPage() {
           style={{ textShadow: "2px 2px 8px rgba(0,0,0,0.7)" }}
         >
           香港，
-          <div className="mt-8 text-3xl">是一個東方及西方文化的交匯的地方。</div>
+          <div className="mt-8 text-3xl">一個東方及西方文化交匯的地方。</div>
         </div>
       </div>
       <div className="wrapper">

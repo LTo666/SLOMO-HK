@@ -59,7 +59,7 @@ export default function CategoryPage() {
     PRODUCT_DATA.filter((item) => item.category.includes(catFiltered.name))
 
   return (
-    <div className="bg-base-200 pb-[4rem]">
+    <div className="bg-base-100 pb-[4rem]">
       <div className="w-full h-[20rem] relative">
         <img
           src={catFiltered && catFiltered.img}
@@ -101,7 +101,7 @@ export default function CategoryPage() {
                     joined={item.joined}
                     comment={item.comment}
                     price={item.price}
-                    img={item.photo_links_2}
+                    img={item.photo_links[1]}
                     key={item.pid}
                   />
                 </Link>

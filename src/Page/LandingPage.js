@@ -2,7 +2,7 @@ import CatCard from "../Component/LandingPage/CatCard"
 import HotTopicCard from "../Component/LandingPage/HotTopicCard"
 import HotProductCard from "../Component/LandingPage/HotProductCard"
 import HotBloggerCard from "../Component/LandingPage/HotBloggerCard"
-import PRODUCT_DATA from "../Data/PRODUCT_DATA.json"
+import HOT_PRODUCT_DATA from "../Data/HOT_PRODUCT_DATA.json"
 import { Link } from "react-router-dom"
 import Hero from "../Component/Hero/Hero"
 
@@ -14,10 +14,14 @@ export default function LandingPage() {
       img: "https://bit.ly/3AOrjqj",
     },
     {
+      blogId: "11",
+      bloggerId: "3",
       title: "香港最高山一日遊",
       img: "https://bit.ly/3yJYNV7",
     },
     {
+      blogId: "12",
+      bloggerId: "4",
       title: "寶雲道合家歡樂遊｜新手行山郊遊路線 沿路拜姻緣石",
       img: "https://bit.ly/3RjdB4g",
     },
@@ -26,12 +30,16 @@ export default function LandingPage() {
       img: "https://bit.ly/3IjOPgp",
     },
     {
+      blogId: "7",
+      bloggerId: "1",
       title: "鶴咀一日遊路線！3個鐘行完 4大必到打卡位 簡單易走＋平路多",
       img: "https://bit.ly/3NQqC2c",
     },
     {
-      title: "點心中的四大天王",
-      img: "https://bit.ly/3OM9cFo",
+      blogId: "2",
+      bloggerId: "2",
+      title: "長沙灣麗閣商場 塗鴉貨櫃打卡位 12間掃街新食場",
+      img: "https://hk.ulifestyle.com.hk/cms/images/event/1024/201912/20191223185418_0_01.jpg",
     },
   ]
 
@@ -119,7 +127,7 @@ export default function LandingPage() {
         <div>
           <p className="pt-20 pb-10 text-[2.25rem] font-medium">熱門活動</p>
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] gap-x-4 gap-y-8 justify-items-center">
-            {PRODUCT_DATA.map((item, id) => {
+            {HOT_PRODUCT_DATA.map((item, id) => {
               return (
                 <Link to={`/product/${item.pid}`} key={id}>
                   <HotProductCard
@@ -129,7 +137,7 @@ export default function LandingPage() {
                     comment={item.comment}
                     price={item.price}
                     location={item.location[1]}
-                    img={item.photo_links_1}
+                    img={item.photo_links[0]}
                     key={id}
                   />
                 </Link>
@@ -155,9 +163,11 @@ export default function LandingPage() {
           <p className="pt-20 pb-10 text-[2.25rem] font-medium">近期熱門網誌</p>
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-6">
             {hotBlogData.map((item, id) => {
-              return (
-                <HotTopicCard title={item.title} image={item.img} key={id} />
-              )
+              return item.blogId && item.bloggerId ? (
+                <Link to={`/blogger/${item.bloggerId}/blog/${item.blogId}`} key={id}>
+                  <HotTopicCard title={item.title} image={item.img} key={id} />
+                </Link>
+              ) : <HotTopicCard title={item.title} image={item.img} key={id} />
             })}
           </div>
         </div>

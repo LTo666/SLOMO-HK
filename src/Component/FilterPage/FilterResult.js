@@ -46,7 +46,7 @@ export default function FilterResult() {
           cat={item.category}
           location={item.location[1]}
           price={item.price}
-          img={item.photo_links_1}
+          img={item.photo_links[2]}
           pid={item.pid}
           key={id}
         />

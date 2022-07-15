@@ -71,7 +71,7 @@ export default function HotProductCard({
             </h6>
           </div>
 
-          <div className="flex pb-1">
+          <div className="flex pb-1 text-primary">
             <svg
               version="1.1"
               id="Capa_1"
@@ -80,7 +80,7 @@ export default function HotProductCard({
               y="0px"
               viewBox="0 0 329.942 329.942"
               width="0.8rem"
-              fill="#37CDBE"
+              fill="currentColor"
             >
               <path
                 d="M329.208,126.666c-1.765-5.431-6.459-9.389-12.109-10.209l-95.822-13.922l-42.854-86.837
@@ -91,7 +91,7 @@ export default function HotProductCard({
                 l-16.233-94.629l69.339-67.583C329.501,138.057,330.972,132.096,329.208,126.666z"
               />
             </svg>
-            <p className="pl-1 text-sm text-primary">
+            <p className="pl-1 text-sm">
               {star}
               <span className="text-base-content text-zinc-400">{` (${sortingComment(
                 comment

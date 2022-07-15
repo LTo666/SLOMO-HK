@@ -13,10 +13,10 @@ export default function CartBtnProductDiv({ shopData }) {
       }
       return (
         <CartBtnProductCard
-          image={item.photo_links_1}
+          image={item.photo_links[0]}
           title={item.name}
           desc={item.description}
-          date={"dd-mm-yyyy"}
+          date={item.date}
           amount={"1"}
           price={item.price}
           pid={item.pid}

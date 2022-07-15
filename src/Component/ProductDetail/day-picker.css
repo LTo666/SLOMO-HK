@@ -1,0 +1,28 @@
+.rdp-button:focus:not([disabled]),.rdp-button:active:not([disabled]){
+  color: hsl(var(--p));
+  background-color: white;
+  border: 1px solid currentColor;
+}
+
+.rdp-button:hover:not([disabled]) {
+  font-weight: 400;
+  color: hsl(var(--pc));
+  background-color: #FFF8D1;
+  border: none;
+}
+
+.rdp-day_selected:not([disabled]),
+.rdp-day_selected:focus:not([disabled]),
+.rdp-day_selected:active:not([disabled]),
+.rdp-day_selected:hover:not([disabled]) {
+  color: white;
+  background-color: hsl(var(--p));
+  border: none;
+  font-weight: bold;
+}
+
+.rdp-day_today:not(.rdp-day_outside) {
+  font-weight: 600;
+  border: 1px solid currentColor;
+}
+

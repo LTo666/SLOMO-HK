@@ -8,7 +8,7 @@ export default function Filter() {
     { name: "家庭", PATH_URL: "family" },
     { name: "情侶", PATH_URL: "couple" },
     { name: "冒險", PATH_URL: "aventure" },
-    { name: "水療", PATH_URL: "spa" },
+    { name: "餐廳", PATH_URL: "restaurant" },
   ]
 
   const regionCheckboxes = region.map((item, id) => {

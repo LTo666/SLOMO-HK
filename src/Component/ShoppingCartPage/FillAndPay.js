@@ -17,6 +17,10 @@ export default function FillAndPay() {
   const [CSV, setCSV] = useState("")
   const dispatch = useDispatch()
 
+  if(shopData.length === 0) {
+    navigate("/cart/list")
+  }
+
   const CartProductElems =
     shopData.length > 0 &&
     shopData.map((item, id) => {
@@ -26,10 +30,10 @@ export default function FillAndPay() {
       }
       return (
         <CartProductCard
-          image={item.photo_links_1}
+          image={item.photo_links[0]}
           title={item.name}
           desc={item.description}
-          date={"dd-mm-yyyy"}
+          date={item.date}
           amount={"1"}
           price={item.price}
           pid={item.pid}

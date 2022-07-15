@@ -5,7 +5,7 @@ import BlogChooseBar from "../Component/BlogUIPage/BlogChooseBar"
 import BloggerIntroCard from "../Component/BlogUIPage/BloggerIntroCard"
 import HotProductCard from "../Component/LandingPage/HotProductCard"
 import BLOGGER_DATA from "../Data/BLOGGER_DATA.json"
-import PRODUCT_DATA from "../Data/PRODUCT_DATA.json"
+import HOT_PRODUCT_DATA from "../Data/HOT_PRODUCT_DATA.json"
 import BLOG_DATA from "../Data/BLOG_DATA.json"
 
 export default function BlogUIPage() {
@@ -48,7 +48,7 @@ export default function BlogUIPage() {
         <div>
           <p className="pt-20 pb-10 text-[2.25rem] font-medium">熱門活動推介</p>
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] gap-x-4 gap-y-8 justify-items-center">
-            {PRODUCT_DATA.map((item, id) => {
+            {HOT_PRODUCT_DATA.map((item, id) => {
               return (
                 <Link to={`/product/${item.pid}`} key={id}>
                   <HotProductCard
@@ -58,7 +58,7 @@ export default function BlogUIPage() {
                     comment={item.comment}
                     price={item.price}
                     location={item.location[1]}
-                    img={item.photo_links_1}
+                    img={item.photo_links[1]}
                     key={id}
                   />
                 </Link>

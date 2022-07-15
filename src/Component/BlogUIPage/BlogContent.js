@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import BLOG_DATA from "../../Data/BLOG_DATA.json"
 
 export default function BlogContent() {
@@ -13,7 +13,7 @@ export default function BlogContent() {
     bloggerBlogsData &&
     bloggerBlogsData.find((item) => parseInt(item.blogId) === parseInt(blogid))
 
-  const blogELem =
+  const blogELem = blogid > BLOG_DATA.length ? <Navigate to="/error" /> :
     blog === undefined ? (
       ""
     ) : (

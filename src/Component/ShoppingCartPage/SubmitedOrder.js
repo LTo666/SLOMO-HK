@@ -19,45 +19,44 @@ export default function SubmitedOrder() {
     <div className="bg-base-100 rounded-[1rem] py-8 px-16">
       <div className="text-[2.25rem]">你好 {ordered.customerName}！</div>
 
-      <div className="flex justify-center mt-8 mb-4">
+      {/* <div className="flex justify-center mt-8 mb-4">
         <img src="https://www.amfori.org/sites/default/files/tick.png" alt="" />
-      </div>
+      </div> */}
 
-      <div className="text-center text-lg">
+      <div className="text-lg mt-2">
         我們已成功為你訂購，訂購確認電郵已傳送到電郵地址 {ordered.customerEmail}
       </div>
 
-      <div className="text-2xl my-8">
+      <div className="text-base mb-8 mt-4">
         <div>訂單編號：{"1000000001"}</div>
         <div>訂購日期：{tdy()}</div>
         <div>聯絡電話：{ordered.customerContactNo}</div>
         <div>訂購總額：＄{ordered.totalPrice}</div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 py-[2rem]" style={{ borderTop: "1px solid hsl(var(--b2))" }}>
+      <div className="grid grid-cols-2 gap-4 py-[2rem]" style={{ borderTop: "1px solid lightgray" }}>
         {ordered.orders.map((item, id) => {
           return (
             <OrderedProduct
               pid={item.pid}
               name={item.name}
-              img={item.photo_links_1}
+              img={item.photo_links[2]}
               price={item.price}
-              date={"yyyy-mm-dd"}
+              date={item.date}
               amount={"1"}
               key={id}
             />
           )
         })}
       </div>
-      <div className="flex flex-col justify-center pt-[2rem] px-24" style={{ borderTop: "1px solid hsl(var(--b2))" }}>
-        <div className="text-4xl leading-[3rem]">
-          謝謝你使用SLOMO香港。 <br></br>
-          <br></br>
-          別讓旅行就在此止步，為你下一段探索旅程做更好的準備，讓你的生活充滿美好！
+      <div className="flex flex-col justify-center pt-[2rem]" style={{ borderTop: "1px solid lightgray" }}>
+        <div className="text-5xl leading-[4rem]">
+          謝謝你使用SloMo香港。<p className="pt-6">別讓旅行就在此止步，為你下一段探索旅程做更好的準備，讓你的生活充滿美好！</p>
+          
         </div>{" "}
         <div className="flex justify-end mt-12 mb-4">
           <div
-            className="btn btn-primary text-xl btn-lg"
+            className="btn btn-primary text-2xl btn-lg"
             onClick={() => navigate("/")}
           >
             發掘更多精彩節目和內容

@@ -6,7 +6,6 @@ import LandingPage from "./Page/LandingPage"
 import FilterPage from "./Page/FilterPage"
 import CategoryPage from "./Page/CategoryPage"
 import ProductDetailPage from "./Page/ProductDetailPage"
-import Carousel from "./Component/Carousel/Carousel"
 import UpperNavbar from "./Component/Navbar/UpperNavbar"
 import LowerNavbar from "./Component/Navbar/LowerNavbar"
 import ShoppingCartPage from "./Page/ShoppingCartPage"
@@ -24,16 +23,9 @@ import BlogContent from "./Component/BlogUIPage/BlogContent"
 function App() {
   const isLoggedIn = useSelector((state) => state.authStore.isLoggedIn)
   const shopData = useSelector((state) => state.cartStore.cartList)
-  const slides = [
-    "https://picsum.photos/id/1032/1440/600",
-    "https://picsum.photos/id/1033/1440/600",
-    "https://picsum.photos/id/1037/1440/600",
-    "https://picsum.photos/id/1035/1440/600",
-    "https://picsum.photos/id/1036/1440/600",
-  ]
 
   return (
-    <div>
+    <div id="app">
       <UpperNavbar isLoggedIn={isLoggedIn} />
       <LowerNavbar />
 
@@ -87,21 +79,15 @@ function App() {
             }
           />
           <Route path="/bloggerlist" element={<BloggerListPage />} />
-          <Route path="/error" element={<ErrorPage />} />
-          <Route path="*" element={<ErrorPage />} />
+          
 
           <Route path="/blogger/:bloggerid" element={<BlogUIPage />}>
             <Route path="blog/:blogid" element={<BlogContent />} />
           </Route>
 
-          <Route
-            path="/carousel"
-            element={
-              <div className="wrapper">
-                <Carousel slides={slides} controls indicators height="500px" />
-              </div>
-            }
-          />
+          <Route path="/error" element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
+    
         </Routes>
       </ScrollToTop>
 

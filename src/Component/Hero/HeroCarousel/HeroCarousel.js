@@ -7,7 +7,6 @@ export default function HeroCarousel({
   slides,
   interval = 5000,
   controls = false,
-  indicators = false,
   autoPlay = true,
   height,
 }) {
