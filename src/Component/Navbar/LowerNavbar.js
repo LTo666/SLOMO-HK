@@ -52,11 +52,6 @@ export default function LowerNavbar() {
 
         <NavbarCatBtn cat={"熱門網誌"} />
 
-        <NavbarCatBtn cat={"禮品兌換"} islast />
-
-        {/* <Link to="/blogui">
-          <NavbarCatBtn cat={"Blog UI"} />
-        </Link> */}
       </div>
     </nav>
   )
