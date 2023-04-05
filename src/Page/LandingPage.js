@@ -50,7 +50,7 @@ export default function LandingPage() {
     {
       name: "酒店",
       PATH_URL: "hotel",
-      img: "https://images.trvl-media.com/hotels/1000000/30000/25700/25691/c4afc819.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      img: "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg",
     },
     {
       name: "家庭",
@@ -77,7 +77,7 @@ export default function LandingPage() {
   const hotBlogger = [
     {
       bloggerId: "1",
-      img: "https://bit.ly/3PbcHVH",
+      img: "https://cdn.vectorstock.com/i/preview-1x/31/52/cute-boston-terrier-cool-sweet-puppy-sitting-vector-45263152.jpg",
       name: "Boston",
     },
     {
