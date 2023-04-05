@@ -5,12 +5,12 @@ import HotBloggerCard from "../Component/LandingPage/HotBloggerCard"
 import HOT_PRODUCT_DATA from "../Data/HOT_PRODUCT_DATA.json"
 import { Link } from "react-router-dom"
 import Hero from "../Component/Hero/Hero"
+import DisclaimerModal from "../Component/DisclaimerModal"
 
 export default function LandingPage() {
   const hotBlogData = [
     {
-      title:
-        "龍蝦灣郊遊徑｜行山路線2小時完！綠蛋島/火石洲/果洲群島360度無敵海景",
+      title: "龍蝦灣郊遊徑｜行山路線2小時完！綠蛋島/火石洲/果洲群島360度無敵海景",
       img: "https://bit.ly/3AOrjqj",
     },
     {
@@ -75,17 +75,17 @@ export default function LandingPage() {
     {
       bloggerId: "1",
       img: "https://bit.ly/3PbcHVH",
-      name: "Bosco",
+      name: "Boston",
     },
     {
       bloggerId: "2",
       img: "https://bit.ly/3ahgQsB",
-      name: "Charmaine",
+      name: "Charlie",
     },
     {
       bloggerId: "3",
       img: "https://bit.ly/3bLm0x6",
-      name: "Chauency",
+      name: "Charles",
     },
     {
       bloggerId: "4",
@@ -167,11 +167,14 @@ export default function LandingPage() {
                 <Link to={`/blogger/${item.bloggerId}/blog/${item.blogId}`} key={id}>
                   <HotTopicCard title={item.title} image={item.img} key={id} />
                 </Link>
-              ) : <HotTopicCard title={item.title} image={item.img} key={id} />
+              ) : (
+                <HotTopicCard title={item.title} image={item.img} key={id} />
+              )
             })}
           </div>
         </div>
       </div>
+      <DisclaimerModal />
     </div>
   )
 }
