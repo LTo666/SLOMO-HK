@@ -95,7 +95,7 @@ export default function CartProductCard({
           "basis-2/12 rounded-[0.5rem] overflow-hidden relative cursor-pointer " +
           style.imgDiv
         }
-        onClick={() => navigate(`/product/${pid}`)}
+        onClick={() => navigate(`/SLOMO-HK/product/${pid}`)}
       >
         <img src={image} alt="" className="w-full aspect-video" />
         <div className={style.overlay}></div>
@@ -106,7 +106,7 @@ export default function CartProductCard({
             "font-bold text-xl leading-7 cursor-pointer hover:underline " +
             style.textOverflowDot
           }
-          onClick={() => navigate(`/product/${pid}`)}
+          onClick={() => navigate(`/SLOMO-HK/product/${pid}`)}
         >
           {title}
         </p>

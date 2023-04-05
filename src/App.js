@@ -31,15 +31,15 @@ function App() {
 
       <ScrollToTop>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/filter" element={<FilterPage />} />
-          <Route path="/category/:cat" element={<CategoryPage />} />
-          <Route path="/cart" element={<ShoppingCartPage />}>
+          <Route path="/SLOMO-HK" element={<LandingPage />} index />
+          <Route path="/SLOMO-HK/filter" element={<FilterPage />} />
+          <Route path="/SLOMO-HK/category/:cat" element={<CategoryPage />} />
+          <Route path="/SLOMO-HK/cart" element={<ShoppingCartPage />}>
             <Route path="list" element={<Cart />} />
             <Route
               path="fillnpay"
               element={
-                <RequireAuth redirectTo="/login">
+                <RequireAuth redirectTo="/SLOMO-HK/login">
                   <FillAndPay />
                 </RequireAuth>
               }
@@ -47,47 +47,45 @@ function App() {
             <Route
               path="ordered"
               element={
-                <RequireAuth redirectTo="/login">
+                <RequireAuth redirectTo="/SLOMO-HK/login">
                   <SubmitedOrder />
                 </RequireAuth>
               }
             />
           </Route>
-          <Route path="/product/:pid" element={<ProductDetailPage />} />
+          <Route path="/SLOMO-HK/product/:pid" element={<ProductDetailPage />} />
           <Route
-            path="/login"
+            path="/SLOMO-HK/login"
             element={
               isLoggedIn && shopData.length > 0 ? (
-                <Navigate to="/cart/list" />
+                <Navigate to="/SLOMO-HK/cart/list" />
               ) : isLoggedIn && shopData.length === 0 ? (
-                <Navigate to="/" />
+                <Navigate to="/SLOMO-HK" />
               ) : (
                 <LoginPage signup={false} />
               )
             }
           />
           <Route
-            path="/signup"
+            path="/SLOMO-HK/signup"
             element={
               isLoggedIn && shopData.length > 0 ? (
-                <Navigate to="/cart/list" />
+                <Navigate to="/SLOMO-HK/cart/list" />
               ) : isLoggedIn && shopData.length === 0 ? (
-                <Navigate to="/" />
+                <Navigate to="/SLOMO-HK" />
               ) : (
                 <LoginPage signup={true} />
               )
             }
           />
-          <Route path="/bloggerlist" element={<BloggerListPage />} />
-          
+          <Route path="/SLOMO-HK/bloggerlist" element={<BloggerListPage />} />
 
-          <Route path="/blogger/:bloggerid" element={<BlogUIPage />}>
+          <Route path="/SLOMO-HK/blogger/:bloggerid" element={<BlogUIPage />}>
             <Route path="blog/:blogid" element={<BlogContent />} />
           </Route>
 
-          <Route path="/error" element={<ErrorPage />} />
+          <Route path="/SLOMO-HK/error" element={<ErrorPage />} />
           <Route path="*" element={<ErrorPage />} />
-    
         </Routes>
       </ScrollToTop>
 

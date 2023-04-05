@@ -39,7 +39,7 @@ export default function HeroSearchBar() {
           onFocus={() => setSearchInputBg("border-primary")}
           onBlur={() => setSearchInputBg("border-base-100")}
         />
-        <Link to="/filter">
+        <Link to="/SLOMO-HK/filter">
           <button
             className="btn btn-primary pl-3 hover:btn-primary hover:text-[white] h-[4rem] w-[4rem]"
             style={{

@@ -13,7 +13,7 @@ export default function BlogContent() {
     bloggerBlogsData &&
     bloggerBlogsData.find((item) => parseInt(item.blogId) === parseInt(blogid))
 
-  const blogELem = blogid > BLOG_DATA.length ? <Navigate to="/error" /> :
+  const blogELem = blogid > BLOG_DATA.length ? <Navigate to="/SLOMO-HK/error" /> :
     blog === undefined ? (
       ""
     ) : (

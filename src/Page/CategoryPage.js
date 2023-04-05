@@ -48,7 +48,7 @@ export default function CategoryPage() {
 
   useEffect(() => {
     if (catMatching.find((item) => item.PATH_URL === cat) === undefined) {
-      navigate("/error")
+      navigate("/SLOMO-HK/error")
     }
   }, [])
 
@@ -93,7 +93,7 @@ export default function CategoryPage() {
           {filtered &&
             filtered.map((item) => {
               return (
-                <Link to={`/product/${item.pid}`} key={item.pid}>
+                <Link to={`/SLOMO-HK/product/${item.pid}`} key={item.pid}>
                   <ProductCard
                     title={item.name}
                     description={item.description}

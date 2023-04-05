@@ -30,7 +30,7 @@ export default function CartListWithoutProduct() {
       <div className="text-2xl pt-4 pb-8">你的購物車是空的</div>
       <div
         className="btn btn-primary btn-lg normal-case text-xl"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/SLOMO-HK")}
       >
         跟著SloMo一起發掘香港精彩活動
       </div>

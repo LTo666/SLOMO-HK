@@ -18,7 +18,7 @@ export default function FillAndPay() {
   const dispatch = useDispatch()
 
   if(shopData.length === 0) {
-    navigate("/cart/list")
+    navigate("/SLOMO-HK/cart/list")
   }
 
   const CartProductElems =
@@ -73,7 +73,7 @@ export default function FillAndPay() {
     setPayment("")
     setCreditCardNo("")
     dispatch(clearCart())
-    shopData.length > 0 && navigate("/cart/ordered")
+    shopData.length > 0 && navigate("/SLOMO-HK/cart/ordered")
   }
 
   return (

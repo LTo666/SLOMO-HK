@@ -5,7 +5,7 @@ export default function FilterCard({ title, location, cat, price, img, pid }) {
   const navigate = useNavigate()
 
   return (
-    <div className={`${Style.TourCard}`} onClick={()=>navigate(`/product/${pid}`)}>
+    <div className={`${Style.TourCard}`} onClick={()=>navigate(`/SLOMO-HK/product/${pid}`)}>
       <figure className="h-[10rem] overflow-hidden">
         <img
           src={img}

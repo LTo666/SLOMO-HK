@@ -116,7 +116,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(8rem,_1fr))] gap-6">
             {cat.map((item, id) => {
               return (
-                <Link to={`/category/${item.PATH_URL}`} key={id}>
+                <Link to={`/SLOMO-HK/category/${item.PATH_URL}`} key={id}>
                   <CatCard title={item.name} img={item.img} />
                 </Link>
               )
@@ -129,7 +129,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] gap-x-4 gap-y-8 justify-items-center">
             {HOT_PRODUCT_DATA.map((item, id) => {
               return (
-                <Link to={`/product/${item.pid}`} key={id}>
+                <Link to={`/SLOMO-HK/product/${item.pid}`} key={id}>
                   <HotProductCard
                     title={item.name}
                     star={item.star}
@@ -151,7 +151,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] gap-6 justify-items-center">
             {hotBlogger.map((item, id) => {
               return (
-                <Link to={`/blogger/${item.bloggerId}`} key={id}>
+                <Link to={`/SLOMO-HK/blogger/${item.bloggerId}`} key={id}>
                   <HotBloggerCard img={item.img} name={item.name} />
                 </Link>
               )
@@ -164,7 +164,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(18rem,_1fr))] gap-6">
             {hotBlogData.map((item, id) => {
               return item.blogId && item.bloggerId ? (
-                <Link to={`/blogger/${item.bloggerId}/blog/${item.blogId}`} key={id}>
+                <Link to={`/SLOMO-HK/blogger/${item.bloggerId}/blog/${item.blogId}`} key={id}>
                   <HotTopicCard title={item.title} image={item.img} key={id} />
                 </Link>
               ) : (

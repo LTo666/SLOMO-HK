@@ -55,7 +55,7 @@ c15.4,0,28.9-13.5,28.9-28.9C382,432.1,374.3,422.4,362.7,418.6z M170,262.4h206.3L
         <div
           className="btn btn-primary"
           onClick={() => {
-            navigate("/cart/list")
+            navigate("/SLOMO-HK/cart/list")
           }}
         >
           查看購物車

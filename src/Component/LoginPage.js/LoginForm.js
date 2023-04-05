@@ -77,11 +77,11 @@ export default function LoginForm({ signup }) {
           {signup ? "已有SloMo帳號？" : "還沒有帳號？現在註冊！"}
         </div>
         {signup ? (
-          <Link to="/login">
+          <Link to="/SLOMO-HK/login">
             <div className="btn btn-ghost">登入</div>
           </Link>
         ) : (
-          <Link to="/signup">
+          <Link to="/SLOMO-HK/signup">
             <div className="btn btn-ghost">註冊</div>
           </Link>
         )}

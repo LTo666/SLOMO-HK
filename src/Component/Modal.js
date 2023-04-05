@@ -14,7 +14,7 @@ export default function Modal({ title, ctn, btn, modalId }) {
             <label
               for={modalId}
               className="btn rounded-[0.5rem] btn-accent text-lg"
-              onClick={() => navigate("/cart/fillnpay")}
+              onClick={() => navigate("/SLOMO-HK/cart/fillnpay")}
             >
               {btn}
             </label>

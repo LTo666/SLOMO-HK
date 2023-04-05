@@ -26,7 +26,7 @@ export default function ShoppingCartBtn() {
       <div
         className="indicator btn h-[full] aspect-square rounded-full transition-all duration-300 ease-out btn-ghost hover:bg-opacity-0"
         onClick={() => {
-          navigate("/cart/list")
+          navigate("/SLOMO-HK/cart/list")
         }}
         style={{padding: "0px"}}
       >

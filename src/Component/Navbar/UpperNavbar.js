@@ -21,7 +21,7 @@ export default function UpperNavbar({ isLoggedIn }) {
     >
       <div className="wrapper flex justify-between">
         <div className="flex items-center space-x-4">
-          <Link to="/">
+          <Link to="/SLOMO-HK">
             <LogoHomeBtn height="2.25rem" />
           </Link>
           <SearchInput />
@@ -86,10 +86,10 @@ export default function UpperNavbar({ isLoggedIn }) {
             </div>
           ) : (
             <div className="flex items-center gap-x-2">
-              <Link to="/signup">
+              <Link to="/SLOMO-HK/signup">
                 <NavbarBtn ctn="註冊" />
               </Link>
-              <Link to="/login">
+              <Link to="/SLOMO-HK/login">
                 <NavbarBtn ctn="登入" />
               </Link>
             </div>

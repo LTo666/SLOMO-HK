@@ -88,7 +88,7 @@ export default function CartBtnProductCard({
           "basis-3/12 rounded-[0.5rem] overflow-hidden relative cursor-pointer" +
           style.imgDiv
         }
-        onClick={() => navigate(`/product/${pid}`)}
+        onClick={() => navigate(`/SLOMO-HK/product/${pid}`)}
       >
         <img src={image} alt="" className="aspect-video cursor-pointer" />
       </div>
@@ -98,7 +98,7 @@ export default function CartBtnProductCard({
           className={
             "truncate font-bold cursor-pointer hover:underline text-base"
           }
-          onClick={() => navigate(`/product/${pid}`)}
+          onClick={() => navigate(`/SLOMO-HK/product/${pid}`)}
         >
           {title}
         </div>

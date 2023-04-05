@@ -46,7 +46,7 @@ export default function CartListWithProduct({ shoppingList }) {
       <div
         className="btn rounded-[0.5rem] transition-all duration-300 ease-out btn-primary w-full text-lg"
         onClick={() =>
-          isLoggedIn && shoppingList.length > 0 && navigate("/cart/fillnpay")
+          isLoggedIn && shoppingList.length > 0 && navigate("/SLOMO-HK/cart/fillnpay")
         }
       >
         付款
@@ -88,7 +88,7 @@ export default function CartListWithProduct({ shoppingList }) {
               c0.1-3.8-0.6-7.3-2.4-10.6c-1.1-3.4-3-6.4-5.7-8.9c-5.2-4.8-12.1-8.4-19.4-8.1C340.3,45.6,333.4,48.1,328.2,53.3L328.2,53.3z"
             />
           </svg>
-          <span className="ml-4 hover:underline cursor-pointer" onClick={()=>{navigate("/")}}>繼續購物</span>
+          <span className="ml-4 hover:underline cursor-pointer" onClick={()=>{navigate("/SLOMO-HK")}}>繼續購物</span>
         </div>
         <div className="basis-2/12 text-end pr-4">
           <p className="text-[1.5rem] leading-8 text-primary font-bold">

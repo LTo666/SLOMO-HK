@@ -7,7 +7,7 @@ export default function ErrorPage() {
       <div className="text-[3rem]">你好似迷路了</div>
       <div
         className="text-md mt-4 underline underline-offset-1 hover:text-primary cursor-pointer"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/SLOMO-HK")}
       >
         按此返回主頁
       </div>

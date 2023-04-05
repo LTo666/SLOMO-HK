@@ -34,7 +34,7 @@ export default function BlogChooseBar({ blogData }) {
                       className="btn btn-ghost w-full px-6 py-4 rounded-[1rem] justify-start font-normal"
                       key={index}
                       onClick={() => {
-                        navigate(`blog/${item.blogId}`)
+                        navigate(`/SLOMO-HK/blog/${item.blogId}`)
                       }}
                     >
                       {item.title}

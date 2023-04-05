@@ -57,7 +57,7 @@ export default function SubmitedOrder() {
         <div className="flex justify-end mt-12 mb-4">
           <div
             className="btn btn-primary text-2xl btn-lg"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/SLOMO-HK")}
           >
             發掘更多精彩節目和內容
           </div>

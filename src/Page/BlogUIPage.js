@@ -14,7 +14,7 @@ export default function BlogUIPage() {
 
   useEffect(() => {
     if (bloggerid > BLOGGER_DATA.length) {
-      navigate("/error")
+      navigate("/SLOMO-HK/error")
     }
   }, [])
 
@@ -50,7 +50,7 @@ export default function BlogUIPage() {
           <div className="grid grid-cols-[repeat(auto-fit,_minmax(16rem,_1fr))] gap-x-4 gap-y-8 justify-items-center">
             {HOT_PRODUCT_DATA.map((item, id) => {
               return (
-                <Link to={`/product/${item.pid}`} key={id}>
+                <Link to={`/SLOMO-HK/product/${item.pid}`} key={id}>
                   <HotProductCard
                     title={item.name}
                     star={item.star}

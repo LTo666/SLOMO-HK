@@ -35,7 +35,7 @@ export default function BloggerListPage() {
         <div className="flex flex-wrap justify-center gap-x-[2rem] gap-y-[3rem] py-[5rem]">
           {bloggers.map((item, id) => {
             return (
-              <Link to={`/blogger/${item.bloggerId}`} key={id}>
+              <Link to={`/SLOMO-HK/blogger/${item.bloggerId}`} key={id}>
                 <BloggerCard
                   profilepic={item.profile}
                   banner={item.banner}

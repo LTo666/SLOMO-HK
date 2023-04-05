@@ -32,7 +32,7 @@ export default function FilterPage() {
         <div className="py-6 pl-2 text-md breadcrumbs">
           <ul>
             <li className="text-primary">
-              <Link to="/">首頁</Link>
+              <Link to="/SLOMO-HK">首頁</Link>
             </li>
             <li>香港</li>
           </ul>

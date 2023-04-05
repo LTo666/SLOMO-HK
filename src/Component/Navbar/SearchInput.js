@@ -39,7 +39,7 @@ export default function SearchInput() {
           onFocus={() => setSearchInputBg("bg-base-100 border-primary")}
           onBlur={() => setSearchInputBg("bg-base-200 border-base-100")}
         />
-        <Link to="/filter">
+        <Link to="/SLOMO-HK/filter">
           <button
             className="btn btn-ghost pl-3 hover:btn-primary hover:text-[white]"
             style={{
