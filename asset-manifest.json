@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/SLOMO-HK/static/css/main.b29c2046.css",
-    "main.js": "/SLOMO-HK/static/js/main.61c7308d.js",
+    "main.js": "/SLOMO-HK/static/js/main.ddaecfd0.js",
     "static/media/search.png": "/SLOMO-HK/static/media/search.cadee8cdb0c0afb1a713.png",
     "static/media/facebook.png": "/SLOMO-HK/static/media/facebook.795fce8e464693d7346d.png",
     "static/media/apple.png": "/SLOMO-HK/static/media/apple.ee574fdf9cf7e16a1337.png",
     "index.html": "/SLOMO-HK/index.html",
     "main.b29c2046.css.map": "/SLOMO-HK/static/css/main.b29c2046.css.map",
-    "main.61c7308d.js.map": "/SLOMO-HK/static/js/main.61c7308d.js.map"
+    "main.ddaecfd0.js.map": "/SLOMO-HK/static/js/main.ddaecfd0.js.map"
   },
   "entrypoints": [
     "static/css/main.b29c2046.css",
-    "static/js/main.61c7308d.js"
+    "static/js/main.ddaecfd0.js"
   ]
 }
