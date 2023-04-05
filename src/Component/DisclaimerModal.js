@@ -1,9 +1,15 @@
 import { useState } from "react"
 import { Button, Modal } from "react-daisyui"
+import { useDispatch } from "react-redux"
+import { setFirstFalse } from "../Redux/firstSlice"
 
 function DisclaimerModal() {
+  const dispatch = useDispatch()
   const [visible, setVisible] = useState(true)
-  const closeModal = () => setVisible(false)
+  const closeModal = () => {
+    dispatch(setFirstFalse())
+    setVisible(false)
+  }
 
   return (
     <Modal open={visible}>

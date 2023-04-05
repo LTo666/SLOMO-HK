@@ -6,8 +6,11 @@ import HOT_PRODUCT_DATA from "../Data/HOT_PRODUCT_DATA.json"
 import { Link } from "react-router-dom"
 import Hero from "../Component/Hero/Hero"
 import DisclaimerModal from "../Component/DisclaimerModal"
+import { useSelector } from "react-redux"
 
 export default function LandingPage() {
+  const isFirst = useSelector((state) => state.firstStore)
+
   const hotBlogData = [
     {
       title: "龍蝦灣郊遊徑｜行山路線2小時完！綠蛋島/火石洲/果洲群島360度無敵海景",
@@ -174,7 +177,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <DisclaimerModal />
+      {isFirst && <DisclaimerModal />}
     </div>
   )
 }
